@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/CrystalReportWebforms
+/MedicioWebformApp/.vs/MedicioWebformApp/v17
+/.vs
+/AKSS/AKSS_Management/AKSS_Management.csproj

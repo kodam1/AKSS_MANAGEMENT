@@ -90,6 +90,7 @@
     <Content Include="assets\img\slides-1.jpg" />
     <Content Include="assets\img\slides-2.jpg" />
     <Content Include="assets\img\slides-3.jpg" />
+    <Content Include="assets\js\Custom.js" />
     <Content Include="assets\js\main.js" />
     <Content Include="assets\scss\Readme.txt" />
     <Content Include="assets\vendor\apexcharts\apexcharts.amd.js" />
@@ -370,6 +371,39 @@
     <Content Include="assets\vendor\tinymce\tinymce.js" />
     <Content Include="assets\vendor\tinymce\tinymce.min.js" />
     <Content Include="Default.aspx" />
+    <Content Include="NiceAdminComponent\charts-apexcharts.aspx" />
+    <Content Include="NiceAdminComponent\charts-chartjs.aspx" />
+    <Content Include="NiceAdminComponent\charts-echarts.aspx" />
+    <Content Include="NiceAdminComponent\components-accordion.aspx" />
+    <Content Include="NiceAdminComponent\components-alerts.aspx" />
+    <Content Include="NiceAdminComponent\components-badges.aspx" />
+    <Content Include="NiceAdminComponent\components-breadcrumbs.aspx" />
+    <Content Include="NiceAdminComponent\components-buttons.aspx" />
+    <Content Include="NiceAdminComponent\components-cards.aspx" />
+    <Content Include="NiceAdminComponent\components-carousel.aspx" />
+    <Content Include="NiceAdminComponent\components-list-group.aspx" />
+    <Content Include="NiceAdminComponent\components-modal.aspx" />
+    <Content Include="NiceAdminComponent\components-pagination.aspx" />
+    <Content Include="NiceAdminComponent\components-progress.aspx" />
+    <Content Include="NiceAdminComponent\components-spinners.aspx" />
+    <Content Include="NiceAdminComponent\components-tabs.aspx" />
+    <Content Include="NiceAdminComponent\components-tooltips.aspx" />
+    <Content Include="NiceAdminComponent\forms-editors.aspx" />
+    <Content Include="NiceAdminComponent\forms-elements.aspx" />
+    <Content Include="NiceAdminComponent\forms-layouts.aspx" />
+    <Content Include="NiceAdminComponent\forms-validation.aspx" />
+    <Content Include="NiceAdminComponent\icons-bootstrap.aspx" />
+    <Content Include="NiceAdminComponent\icons-boxicons.aspx" />
+    <Content Include="NiceAdminComponent\icons-remix.aspx" />
+    <Content Include="NiceAdminComponent\pages-blank.aspx" />
+    <Content Include="NiceAdminComponent\pages-contact.aspx" />
+    <Content Include="NiceAdminComponent\pages-error-404.aspx" />
+    <Content Include="NiceAdminComponent\pages-faq.aspx" />
+    <Content Include="pages-login.aspx" />
+    <Content Include="pages-register.aspx" />
+    <Content Include="NiceAdminComponent\tables-data.aspx" />
+    <Content Include="NiceAdminComponent\tables-general.aspx" />
+    <Content Include="NiceAdminComponent\users-profile.aspx" />
     <Content Include="NiceAdmin\assets\css\style.css" />
     <Content Include="NiceAdmin\assets\img\apple-touch-icon.png" />
     <Content Include="NiceAdmin\assets\img\card.jpg" />
@@ -725,6 +759,237 @@
     </Compile>
     <Compile Include="Main.Master.designer.cs">
       <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\charts-apexcharts.aspx.cs">
+      <DependentUpon>charts-apexcharts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\charts-apexcharts.aspx.designer.cs">
+      <DependentUpon>charts-apexcharts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\charts-chartjs.aspx.cs">
+      <DependentUpon>charts-chartjs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\charts-chartjs.aspx.designer.cs">
+      <DependentUpon>charts-chartjs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\charts-echarts.aspx.cs">
+      <DependentUpon>charts-echarts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\charts-echarts.aspx.designer.cs">
+      <DependentUpon>charts-echarts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-accordion.aspx.cs">
+      <DependentUpon>components-accordion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-accordion.aspx.designer.cs">
+      <DependentUpon>components-accordion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-alerts.aspx.cs">
+      <DependentUpon>components-alerts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-alerts.aspx.designer.cs">
+      <DependentUpon>components-alerts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-badges.aspx.cs">
+      <DependentUpon>components-badges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-badges.aspx.designer.cs">
+      <DependentUpon>components-badges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-breadcrumbs.aspx.cs">
+      <DependentUpon>components-breadcrumbs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-breadcrumbs.aspx.designer.cs">
+      <DependentUpon>components-breadcrumbs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-buttons.aspx.cs">
+      <DependentUpon>components-buttons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-buttons.aspx.designer.cs">
+      <DependentUpon>components-buttons.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-cards.aspx.cs">
+      <DependentUpon>components-cards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-cards.aspx.designer.cs">
+      <DependentUpon>components-cards.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-carousel.aspx.cs">
+      <DependentUpon>components-carousel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-carousel.aspx.designer.cs">
+      <DependentUpon>components-carousel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-list-group.aspx.cs">
+      <DependentUpon>components-list-group.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-list-group.aspx.designer.cs">
+      <DependentUpon>components-list-group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-modal.aspx.cs">
+      <DependentUpon>components-modal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-modal.aspx.designer.cs">
+      <DependentUpon>components-modal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-pagination.aspx.cs">
+      <DependentUpon>components-pagination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-pagination.aspx.designer.cs">
+      <DependentUpon>components-pagination.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-progress.aspx.cs">
+      <DependentUpon>components-progress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-progress.aspx.designer.cs">
+      <DependentUpon>components-progress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-spinners.aspx.cs">
+      <DependentUpon>components-spinners.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-spinners.aspx.designer.cs">
+      <DependentUpon>components-spinners.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-tabs.aspx.cs">
+      <DependentUpon>components-tabs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-tabs.aspx.designer.cs">
+      <DependentUpon>components-tabs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-tooltips.aspx.cs">
+      <DependentUpon>components-tooltips.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\components-tooltips.aspx.designer.cs">
+      <DependentUpon>components-tooltips.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\forms-editors.aspx.cs">
+      <DependentUpon>forms-editors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\forms-editors.aspx.designer.cs">
+      <DependentUpon>forms-editors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\forms-elements.aspx.cs">
+      <DependentUpon>forms-elements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\forms-elements.aspx.designer.cs">
+      <DependentUpon>forms-elements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\forms-layouts.aspx.cs">
+      <DependentUpon>forms-layouts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\forms-layouts.aspx.designer.cs">
+      <DependentUpon>forms-layouts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\forms-validation.aspx.cs">
+      <DependentUpon>forms-validation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\forms-validation.aspx.designer.cs">
+      <DependentUpon>forms-validation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\icons-bootstrap.aspx.cs">
+      <DependentUpon>icons-bootstrap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\icons-bootstrap.aspx.designer.cs">
+      <DependentUpon>icons-bootstrap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\icons-boxicons.aspx.cs">
+      <DependentUpon>icons-boxicons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\icons-boxicons.aspx.designer.cs">
+      <DependentUpon>icons-boxicons.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\icons-remix.aspx.cs">
+      <DependentUpon>icons-remix.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\icons-remix.aspx.designer.cs">
+      <DependentUpon>icons-remix.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\pages-blank.aspx.cs">
+      <DependentUpon>pages-blank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\pages-blank.aspx.designer.cs">
+      <DependentUpon>pages-blank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\pages-contact.aspx.cs">
+      <DependentUpon>pages-contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\pages-contact.aspx.designer.cs">
+      <DependentUpon>pages-contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\pages-error-404.aspx.cs">
+      <DependentUpon>pages-error-404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\pages-error-404.aspx.designer.cs">
+      <DependentUpon>pages-error-404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\pages-faq.aspx.cs">
+      <DependentUpon>pages-faq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\pages-faq.aspx.designer.cs">
+      <DependentUpon>pages-faq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages-login.aspx.cs">
+      <DependentUpon>pages-login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages-login.aspx.designer.cs">
+      <DependentUpon>pages-login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pages-register.aspx.cs">
+      <DependentUpon>pages-register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pages-register.aspx.designer.cs">
+      <DependentUpon>pages-register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\tables-data.aspx.cs">
+      <DependentUpon>tables-data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\tables-data.aspx.designer.cs">
+      <DependentUpon>tables-data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\tables-general.aspx.cs">
+      <DependentUpon>tables-general.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\tables-general.aspx.designer.cs">
+      <DependentUpon>tables-general.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NiceAdminComponent\users-profile.aspx.cs">
+      <DependentUpon>users-profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NiceAdminComponent\users-profile.aspx.designer.cs">
+      <DependentUpon>users-profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -1135,6 +1400,7 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
