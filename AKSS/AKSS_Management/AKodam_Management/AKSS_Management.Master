@@ -330,10 +330,16 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-           <a href="/AKodam_Management/AKSS_Code.aspx">
-             <i class="bi bi-circle"></i><span>AKSS ShortCut Code</span>
+           <a href="/AKodam_Management/ClientFollowUpMaster.aspx">
+             <i class="bi bi-circle"></i><span>Client Follow Up Master</span>
            </a>
          </li>
+            <li>
+                <a href="/AKodam_Management/AKSS_Code.aspx">
+                    <i class="bi bi-circle"></i><span>AKSS ShortCut Code</span>
+                </a>
+            </li>
+            
           <%--  <li>
             <a href="/NiceAdminComponent/components-alerts.aspx">
               <i class="bi bi-circle"></i><span>Alerts</span>
