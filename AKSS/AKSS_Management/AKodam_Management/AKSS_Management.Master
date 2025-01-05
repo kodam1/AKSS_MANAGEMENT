@@ -334,6 +334,11 @@
              <i class="bi bi-circle"></i><span>Client Follow Up Master</span>
            </a>
          </li>
+         <li>
+           <a href="/AKodam_Management/ClientFollowUpMasterList.aspx">
+             <i class="bi bi-circle"></i><span>Client Follow Up Master List</span>
+           </a>
+         </li>
             <li>
                 <a href="/AKodam_Management/AKSS_Code.aspx">
                     <i class="bi bi-circle"></i><span>AKSS ShortCut Code</span>

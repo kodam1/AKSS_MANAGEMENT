@@ -31,17 +31,18 @@
  
           <div class="card ">
             <div class="card-body">
-              <h5 class="card-title">Client Personal Info</h5>              
+              <h5 class="card-title">Client Personal Info</h5> 
+                
               <div class="row g-3 ">
                   <div class="col-md-6 mb-3">
                   <div class="form-floating">
-                    <asp:TextBox id="txtClientId" runat="server" class="form-control"   AutoPostBack="true" placeholder="Client Id"></asp:TextBox> <%--OnTextChanged="txtUserId_TextChanged"--%>
+                    <asp:TextBox id="txtClientId" runat="server" class="form-control" AutoPostBack="true" OnTextChanged="txtClientId_TextChanged" ></asp:TextBox> 
                     <label for="txtClientId">Client Id</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
                   <div class="form-floating">
-                     <asp:TextBox id="txtClientName" runat="server" class="form-control"   placeholder="Client Name" ></asp:TextBox>                    
+                     <asp:TextBox id="txtClientName" runat="server" class="form-control" AutoPostBack="true" OnTextChanged="txtClientName_TextChanged" ></asp:TextBox>                    
                     <label for="txtClientName">Client Name</label>
                   </div>
                 </div>               
@@ -49,7 +50,7 @@
              <div class="row g-3">
               <div class="col-md-6 mb-3">
                <div class="form-floating">
-                  <asp:TextBox id="txtAge" runat="server" class="form-control" placeholder="Age" ></asp:TextBox>                                        
+                  <asp:TextBox id="txtAge" runat="server" class="form-control" ></asp:TextBox>                                        
                  <label for="txtAge">Age</label>
                </div>
              </div>
@@ -75,13 +76,13 @@
               <div class="row g-3">
                 <div class="col-md-6 mb-3">
                   <div class="form-floating">
-                    <asp:TextBox id="txtDOB" runat="server" class="form-control"   placeholder="DOB" ></asp:TextBox>                                        
+                    <asp:TextBox id="txtDOB" runat="server" class="form-control" ></asp:TextBox>                                        
                     <label for="txtDOB">DOB</label>
                   </div>
                 </div>
-                <div class="col-6 mb-3">
+                <div class="col-md-6 mb-3">
                      <div class="form-floating">
-                       <asp:TextBox id="txtDescription" runat="server" class="form-control" TextMode="MultiLine" Height="100px" Width="100%" placeholder="Description" ></asp:TextBox>                                        
+                       <asp:TextBox id="txtDescription" runat="server" class="form-control" TextMode="MultiLine" Height="100px" Width="100%" ></asp:TextBox>                                        
                        <label for="txtDescription">Description</label>
                      </div>
                 </div>
@@ -89,7 +90,7 @@
               <div class="row g-3">
                 <div class="col-md-6 mb-3">                
                     <div class="form-floating">
-                      <asp:TextBox id="txtCategory" runat="server"  class="form-control"   placeholder="Category" ></asp:TextBox>                                        
+                      <asp:TextBox id="txtCategory" runat="server"  class="form-control"   ></asp:TextBox>                                        
                       <label for="txtCategory">Category</label>
                     </div>                 
                 </div>
@@ -143,7 +144,7 @@
                     </div>
                       <div class="col-md-6 mb-3">
                         <div class="form-floating">
-                           <asp:TextBox id="txtAddress1" runat="server" class="form-control" TextMode="MultiLine" Rows="3" Height="100px" Width="100%" placeholder="Address1"></asp:TextBox>                                                 
+                           <asp:TextBox id="txtAddress1" runat="server" class="form-control" TextMode="MultiLine" Rows="3" Height="100px" Width="100%" ></asp:TextBox>                                                 
                           <label for="txtAddress1">Address1</label>
                         </div>
                       </div>
@@ -151,13 +152,13 @@
                      <div class="row g-3">
                        <div class="col-md-6 mb-3">
                          <div class="form-floating">
-                           <asp:TextBox id="txtAddress2" runat="server" class="form-control" TextMode="MultiLine" Rows="3" Height="100px" Width="100%" placeholder="Address2"></asp:TextBox>                                                 
+                           <asp:TextBox id="txtAddress2" runat="server" class="form-control" TextMode="MultiLine" Rows="3" Height="100px" Width="100%"></asp:TextBox>                                                 
                           <label for="txtAddress2">Address2</label>
                          </div>
                        </div>
-                       <div class="col-6 mb-3">
+                       <div class="col-md-6 mb-3">
                          <div class="form-floating">
-                           <asp:TextBox id="txtOpenHours" runat="server" class="form-control" TextMode="MultiLine" Rows="3" Height="100px" Width="100%" placeholder="Open Hours"></asp:TextBox>                                                 
+                           <asp:TextBox id="txtOpenHours" runat="server" class="form-control" TextMode="MultiLine" Rows="3" Height="100px" Width="100%" ></asp:TextBox>                                                 
                           <label for="txtOpenHours">Open Hours</label>
                          </div>
                        </div>
@@ -173,13 +174,13 @@
                 <div class="row g-3 ">
                   <div class="col-md-6 mb-3">
                   <div class="form-floating">
-                    <asp:TextBox id="txtWebsite" runat="server" class="form-control" placeholder="Website"></asp:TextBox> <%--OnTextChanged="txtUserId_TextChanged"--%>
+                    <asp:TextBox id="txtWebsite" runat="server" class="form-control" ></asp:TextBox>  
                     <label for="txtWebsite">Website</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-3">
                   <div class="form-floating">
-                     <asp:TextBox id="txtDirection" runat="server" class="form-control"   placeholder="Direction" ></asp:TextBox>                    
+                     <asp:TextBox id="txtDirection" runat="server" class="form-control" ></asp:TextBox>                    
                     <label for="txtDirection">Direction</label>
                   </div>
                 </div>               
@@ -187,13 +188,13 @@
              <div class="row g-3">
               <div class="col-md-6 mb-3">
                <div class="form-floating">
-                  <asp:TextBox id="txtRating" runat="server" class="form-control" placeholder="Rating" ></asp:TextBox>                                        
+                  <asp:TextBox id="txtRating" runat="server" class="form-control" ></asp:TextBox>                                        
                  <label for="txtRating">Rating</label>
                </div>
              </div>
                <div class="col-md-6 mb-3">
                  <div class="form-floating">
-                    <asp:TextBox id="txtMobileNumber" runat="server" class="form-control"  placeholder="Mobile Number"></asp:TextBox>                                          
+                    <asp:TextBox id="txtMobileNumber" runat="server" class="form-control" ></asp:TextBox>                                          
                    <label for="txtMobileNumber">Mobile Number</label>
                  </div>
                </div>
@@ -201,13 +202,13 @@
               <div class="row g-3">
                 <div class="col-md-6 mb-3">
                   <div class="form-floating">
-                    <asp:TextBox id="txtTelephoneNumber" runat="server" class="form-control"   placeholder="Telephone Number" ></asp:TextBox>                                        
+                    <asp:TextBox id="txtTelephoneNumber" runat="server" class="form-control" ></asp:TextBox>                                        
                     <label for="txtTelephoneNumber">Telephone Number</label>
                   </div>
                 </div>
-                <div class="col-6 mb-3">
+                <div class="col-md-6 mb-3">
                      <div class="form-floating">
-                     <asp:TextBox id="txtEmailId" runat="server" class="form-control" TextMode="Email" placeholder="Email" ></asp:TextBox>                                        
+                     <asp:TextBox id="txtEmailId" runat="server" class="form-control" TextMode="Email" ></asp:TextBox>                                        
                      <label for="txtEmailId">Email</label>
                      </div>
                 </div>
@@ -215,13 +216,13 @@
                <div class="row g-3">
                    <div class="col-md-6 mb-3">
                      <div class="form-floating">
-                       <asp:TextBox id="txtTwitter" runat="server" class="form-control" placeholder="Twitter" ></asp:TextBox>                                        
+                       <asp:TextBox id="txtTwitter" runat="server" class="form-control" ></asp:TextBox>                                        
                        <label for="txtTwitter">Twitter</label>
                      </div>
                    </div>
-                   <div class="col-6 mb-3">
+                   <div class="col-md-6 mb-3">
                         <div class="form-floating">
-                        <asp:TextBox id="txtFacebook" runat="server" class="form-control" TextMode="Email"  placeholder="Facebook" ></asp:TextBox>                                        
+                        <asp:TextBox id="txtFacebook" runat="server" class="form-control"  ></asp:TextBox>                                        
                         <label for="txtFacebook">Facebook</label>
                         </div>
                    </div>
@@ -229,13 +230,13 @@
                   <div class="row g-3">
                    <div class="col-md-6 mb-3">
                      <div class="form-floating">
-                       <asp:TextBox id="txtInstagram" runat="server" class="form-control" placeholder="Instagram" ></asp:TextBox>                                        
+                       <asp:TextBox id="txtInstagram" runat="server" class="form-control" ></asp:TextBox>                                        
                        <label for="txtInstagram">Instagram</label>
                      </div>
                    </div>
-                   <div class="col-6 mb-3">
+                   <div class="col-md-6 mb-3">
                         <div class="form-floating">
-                        <asp:TextBox id="txtLinkedin" runat="server" class="form-control" placeholder="Linkedin" ></asp:TextBox>                                        
+                        <asp:TextBox id="txtLinkedin" runat="server" class="form-control" ></asp:TextBox>                                        
                         <label for="txtLinkedin">Linkedin</label>
                         </div>
                    </div>
@@ -279,13 +280,13 @@
              <div class="row g-3">
               <div class="col-md-6 mb-3">
                <div class="form-floating">
-                  <asp:TextBox id="txtFollowUpDateTime" runat="server" class="form-control" TextMode="DateTimeLocal" placeholder="Follow Up Date Time" ></asp:TextBox>                                        
+                  <asp:TextBox id="txtFollowUpDateTime" runat="server" class="form-control" TextMode="DateTimeLocal" ></asp:TextBox>                                        
                  <label for="txtFollowUpDateTime">Follow Up Date Time</label>
                </div>
              </div>
                <div class="col-md-6 mb-3">
                  <div class="form-floating">
-                    <asp:TextBox id="txtFollowUpReason" runat="server" class="form-control"  TextMode="MultiLine" Rows="3" Height="100px" Width="100%"  placeholder="Follow Up Reason"></asp:TextBox>                                          
+                    <asp:TextBox id="txtFollowUpReason" runat="server" class="form-control"  TextMode="MultiLine" Rows="3" Height="100px" Width="100%" ></asp:TextBox>                                          
                    <label for="txtFollowUpReason">Follow Up Reason</label>
                  </div>
                </div>
@@ -293,13 +294,13 @@
               <div class="row g-3">
                 <div class="col-md-6 mb-3">
                   <div class="form-floating">
-                  <asp:TextBox id="txtNewFollowUpDateTime" runat="server" class="form-control"  TextMode="DateTimeLocal"  placeholder="New Follow Up Date Time" ></asp:TextBox>                                        
+                  <asp:TextBox id="txtNewFollowUpDateTime" runat="server" class="form-control"  TextMode="DateTimeLocal" ></asp:TextBox>                                        
                  <label for="txtNewFollowUpDateTime">New Follow Up Date Time</label>
                   </div>
                 </div>
-                <div class="col-6 mb-3">
+                <div class="col-md-6 mb-3">
                  <div class="form-floating">
-                    <asp:TextBox id="txtNewFollowUpReason" runat="server" class="form-control"  TextMode="MultiLine" Rows="3" Height="100px" Width="100%"  placeholder="New Follow Up Reason"></asp:TextBox>                                          
+                    <asp:TextBox id="txtNewFollowUpReason" runat="server" class="form-control"  TextMode="MultiLine" Rows="3" Height="100px" Width="100%"></asp:TextBox>                                          
                    <label for="txtNewFollowUpReason">New Follow Up Reason</label>
                  </div>
                 </div>
@@ -307,11 +308,11 @@
               <div class="row g-3">
                 <div class="col-md-6 mb-3">
                   <div class="form-floating">
-                  <asp:TextBox id="txtNotes" runat="server" class="form-control" TextMode="MultiLine" Rows="3" Height="100px" Width="100%"  placeholder="Notes" ></asp:TextBox>                                        
+                  <asp:TextBox id="txtNotes" runat="server" class="form-control" TextMode="MultiLine" Rows="3" Height="100px" Width="100%"  ></asp:TextBox>                                        
                  <label for="txtNotes">Notes</label>
                   </div>
                 </div>
-                <div class="col-6 mb-3">
+                <div class="col-md-6 mb-3">
                  <div class="form-check">
                     <asp:CheckBox id="ChkActive" runat="server" Checked="true" class="form-check-input" />
                    <label for="ChkActive" class="form-check-label">Active</label>
@@ -328,11 +329,11 @@
          <%--<button type="submit" class="btn btn-primary">Submit</button>
          <button type="reset" class="btn btn-secondary">Reset</button>--%>
 
-           <asp:Button ID="BtnSave" runat="server" Text="Submit"  class="btn btn-primary"/> <%--OnClick="BtnSave_Click"--%>
+           <asp:Button ID="BtnSave" runat="server" Text="Submit" OnClick="BtnSave_Click" class="btn btn-primary"/> <%----%>
            <%--<asp:Button ID="btnUpdate" runat="server" Text="Modify" OnClick="BtnUpdate_Click" class="btn btn-primary"/>--%>
-            <asp:Button ID="BtnDelete" runat="server" Text="Delete"  type="reset" class="btn btn-danger"/> <%--OnClick="BtnDelete_Click"--%>
-           <asp:Button ID="BtnReset" runat="server" Text="Reset" type="reset" class="btn btn-secondary"/>  <%--OnClick="BtnReset_Click" --%>
-           <asp:Button ID="BtnExportToExcel" runat="server" Text="Export To Excel" class="btn btn-primary"/> <%-- OnClick="BtnExportToExcel_Click"--%>
+            <asp:Button ID="BtnDelete" runat="server" Text="Delete"  type="reset" OnClick="BtnDelete_Click" class="btn btn-danger"/> <%----%>
+           <asp:Button ID="BtnReset" runat="server" Text="Reset" type="reset" OnClick="BtnReset_Click" class="btn btn-secondary"/>  <%-- --%>
+           <asp:Button ID="BtnExportToExcel" runat="server" Text="Export To Excel" OnClick="BtnExportToExcel_Click" class="btn btn-primary" Visible="false"/> <%-- --%>
            
        </div>
      </div>
@@ -341,7 +342,7 @@
 
      </asp:Panel>
 
-     <asp:Panel ID="PnlGV" runat="server" class="card" ScrollBars="Auto" Width="100%" >
+     <asp:Panel ID="PnlGV" runat="server" class="card" ScrollBars="Auto" Width="100%" Visible="false" >
         <%-- <div class="pagetitle">
           <h3 class="mb-3">User Master List</h3>
          </div>--%>
@@ -349,19 +350,27 @@
          <div class="row">
              <div class="col-lg-12">
                  <div class="card-body">
-                     <h5 class="card-title">User Master List</h5>
+                     <h5 class="card-title">Client Follow Up Master List</h5>
 
-                     <asp:GridView ID="gvUserMaster" runat="server" AutoGenerateColumns="false" CssClass="table datatable" 
-                          ShowHeader="true">
+                     <asp:GridView ID="gvClientFollowUpMaster" runat="server" AutoGenerateColumns="false" 
+                                    CssClass="table datatable" DataKeyNames="ClientId"
+                                    ShowHeader="true"
+                                    >
                          <Columns>
-                             <asp:BoundField DataField="UserId" HeaderText="User Id" />
-                             <asp:BoundField DataField="UserName" HeaderText="User Name" />
-                             <asp:BoundField DataField="Email" HeaderText="Email" />
-                             <%-- <asp:BoundField DataField="PasswordHash" HeaderText="Password" />--%>
-                             <asp:BoundField DataField="FullName" HeaderText="FullName" />
-                             <asp:BoundField DataField="Role" HeaderText="Role" />
-                             <asp:BoundField DataField="PhoneNumber" HeaderText="PhoneNumber" />
-                             <asp:BoundField DataField="IsActive" HeaderText="Active" />
+                             <asp:BoundField DataField="ClientId" HeaderText="Client Id" />
+                             <asp:BoundField DataField="Client_Name" HeaderText="Client_Name" />
+                             <asp:BoundField DataField="Ratting" HeaderText="Ratting" />
+                              <asp:BoundField DataField="Category" HeaderText="Category" />
+                             <asp:BoundField DataField="Address1" HeaderText="Address 1" />
+                             <asp:BoundField DataField="Open_Hours" HeaderText="Open_Hours" />
+                             <asp:BoundField DataField="Direction" HeaderText="Direction" />
+                            <%-- <asp:BoundField DataField="Review" HeaderText="Review" />--%>
+                             <asp:BoundField DataField="Address2" HeaderText="Address 2" />
+                            <asp:BoundField DataField="Mobile_No" HeaderText="Mobile No" />
+                            <asp:BoundField DataField="Telephone_No" HeaderText="Telephone No" />
+                             <asp:BoundField DataField="Follow_Up_Reason" HeaderText="Follow Up" />
+                             <asp:BoundField DataField="Website" HeaderText="Website" />
+                            <asp:BoundField DataField="IsActive" HeaderText="Active" />
 
                          </Columns>
                      </asp:GridView>
