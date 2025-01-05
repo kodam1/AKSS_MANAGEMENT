@@ -70,6 +70,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminPanel\UserMaster.aspx" />
+    <Content Include="AKodam_Management\EmpDemo.aspx" />
+    <Content Include="AKodam_Management\Service_GridviewCrudSP.aspx" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\img\apple-touch-icon.png" />
     <Content Include="assets\img\card.jpg" />
@@ -374,6 +377,7 @@
     <Content Include="assets\vendor\tinymce\tinymce.js" />
     <Content Include="assets\vendor\tinymce\tinymce.min.js" />
     <Content Include="Default.aspx" />
+    <Content Include="DefaultAKSS.aspx" />
     <Content Include="NiceAdminComponent\charts-apexcharts.aspx" />
     <Content Include="NiceAdminComponent\charts-chartjs.aspx" />
     <Content Include="NiceAdminComponent\charts-echarts.aspx" />
@@ -749,6 +753,34 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPanel\UserMaster.aspx.cs">
+      <DependentUpon>UserMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\UserMaster.aspx.designer.cs">
+      <DependentUpon>UserMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AKodam_Management\AKSS_Management.Master.cs">
+      <DependentUpon>AKSS_Management.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AKodam_Management\AKSS_Management.Master.designer.cs">
+      <DependentUpon>AKSS_Management.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AKodam_Management\EmpDemo.aspx.cs">
+      <DependentUpon>EmpDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AKodam_Management\EmpDemo.aspx.designer.cs">
+      <DependentUpon>EmpDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AKodam_Management\Service_GridviewCrudSP.aspx.cs">
+      <DependentUpon>Service_GridviewCrudSP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AKodam_Management\Service_GridviewCrudSP.aspx.designer.cs">
+      <DependentUpon>Service_GridviewCrudSP.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CommonLogicHelper.cs" />
     <Compile Include="CommonUtility.cs" />
     <Compile Include="DatabaseHelper.cs" />
@@ -758,6 +790,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultAKSS.aspx.cs">
+      <DependentUpon>DefaultAKSS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultAKSS.aspx.designer.cs">
+      <DependentUpon>DefaultAKSS.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.Master.cs">
       <DependentUpon>Main.Master</DependentUpon>
@@ -1213,6 +1252,7 @@
     <Content Include="assets\vendor\tinymce\license.md" />
     <Content Include="assets\vendor\tinymce\package.json" />
     <Content Include="assets\vendor\tinymce\README.md" />
+    <Content Include="AKodam_Management\AKSS_Management.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1407,7 +1447,6 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AKodam_Management\" />
     <Folder Include="CMIS\" />
     <Folder Include="HMIS\" />
     <Folder Include="MASTERS\" />

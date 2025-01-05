@@ -15,13 +15,15 @@ using System.Text.RegularExpressions;
 using AjaxControlToolkit.HtmlEditor.ToolbarButtons;
 using Microsoft.SqlServer.Server;
 using System.Text;
+using System.Configuration;
+using System.Security.Cryptography;
 
 namespace AKSS_Management
 {
 
     public static class CommonUtility
     {
-        private static readonly string connectionString = "your_connection_string_here";
+        private static readonly string connectionString = ConfigurationManager.ConnectionStrings["dbConnection"].ToString(); //"your_connection_string_here";
 
         /* ExecuteStoredProcedureNonQueryAsync  */
         //string spname = "SPNAME";
@@ -29,7 +31,7 @@ namespace AKSS_Management
         //    new SqlParameter("@Value1", value1),
         //    new SqlParameter("@Value2", value2)
         //};
-        //int rowsInserted = await CommonUtility.ExecuteNonQueryAsync(spname, parameters);
+        //int rowsInserted = await CommonUtility.ExecuteStoredProcedureNonQueryAsync(spname, parameters);
 
         public static async Task<int> ExecuteStoredProcedureNonQueryAsync(string procedureName, SqlParameter[] parameters)
         {
@@ -53,7 +55,7 @@ namespace AKSS_Management
         //SqlParameter[] scalarParameters = {
         //    new SqlParameter("@Value1", value1)
         //};
-        //object result = await CommonUtility.ExecuteScalarAsync(spname, scalarParameters);
+        //object result = await CommonUtility.ExecuteStoredProcedureScalarAsync(spname, scalarParameters);
         //int count = Convert.ToInt32(result);
 
         public static async Task<object> ExecuteStoredProcedureScalarAsync(string procedureName, SqlParameter[] parameters)
@@ -78,12 +80,9 @@ namespace AKSS_Management
         //SqlParameter[] parameters = {
         //    new SqlParameter("@Value1", value1)
         //};
-        //DataTable dataTable = await CommonUtility.ReadDataTableAsync(spname, parameters);
+        //DataTable dataTable = await CommonUtility.ExecuteStoredProcedureDataTableAsync(spname, parameters);
 
-        //string procedureName = "SelectAllProcedure";
-        //SqlParameter[] dataSetParameters = { };
-        //DataSet dataSet = await CommonUtility.ExecuteStoredProcedureDataSetAsync(procedureName, dataSetParameters);
-
+       
         public static async Task<DataTable> ExecuteStoredProcedureDataTableAsync(string procedureName, SqlParameter[] parameters)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -112,6 +111,11 @@ namespace AKSS_Management
         //    new SqlParameter("@Value2", value2)
         //};
         //DataSet dataSet = await CommonUtility.ReadDataSetAsync(spname, parameters);
+
+        //string procedureName = "SelectAllProcedure";
+        //SqlParameter[] dataSetParameters = { };
+        //DataSet dataSet = await CommonUtility.ExecuteStoredProcedureDataSetAsync(procedureName, dataSetParameters);
+
 
         public static async Task<DataSet> ExecuteStoredProcedureDataSetAsync(string procedureName, SqlParameter[] parameters)
         {
@@ -684,86 +688,86 @@ namespace AKSS_Management
 
         //    string str = "Hello, World!";
         //    int length = str.Length; // Output: 13
-            
+
         //    //string.ToUpper()
-            
+
         //    //Converts the string to uppercase.
-            
+
         //    string str = "Hello, World!";
         //    string upperStr = str.ToUpper(); // Output: "HELLO, WORLD!"
-            
+
         //    //string.ToLower()
-            
+
         //    //Converts the string to lowercase.
-            
+
         //    string str = "Hello, World!";
         //    string lowerStr = str.ToLower(); // Output: "hello, world!"
-            
+
         //    //string.Trim()
-            
+
         //    //Removes all leading and trailing white-space characters from the string.
-            
+
         //    string str = "  Hello, World!  ";
         //    string trimmedStr = str.Trim(); // Output: "Hello, World!"
-            
+
         //    string str = "  Hello, World!  ";
         //    string trimmedStr = str.Trim(); // Output: "Hello, World!"
-            
+
         //    //string.TrimStart() and string.TrimEnd()
-            
+
         //    //Removes all leading(or trailing) white - space characters from the string.
-            
+
         //    string str = "  Hello, World!  ";
         //    string trimmedStart = str.TrimStart(); // Output: "Hello, World!  "
         //    string trimmedEnd = str.TrimEnd(); // Output: "  Hello, World!"
-            
+
         //    //string.Substring(int startIndex, int length)
-            
+
         //    //Retrieves a substring from the string starting at the specified index and having the specified length.
-            
+
         //    string str = "Hello, World!";
         //    string subStr = str.Substring(7, 5); // Output: "World"
-            
+
         //    //string.Replace(string oldValue, string newValue)
-            
+
         //    //Replaces all occurrences of a specified string with another specified string.
-            
+
         //    string str = "Hello, World!";
         //    string replacedStr = str.Replace("World", "C#"); // Output: "Hello, C#!"
-            
+
         //    //string.Contains(string value)
-            
+
         //    //Returns a value indicating whether a specified string occurs within this string.
-            
+
         //    string str = "Hello, World!";
         //    bool contains = str.Contains("World"); // Output: true
-            
+
         //    //string.IndexOf(string value)
-            
+
         //    //Reports the zero - based index of the first occurrence of a specified string within this string.
-            
+
         //    string str = "Hello, World!";
         //    int index = str.IndexOf("World"); // Output: 7
-            
+
         //    //string.LastIndexOf(string value)
-            
+
         //    //Reports the zero - based index of the last occurrence of a specified string within this string.
-            
+
         //    string str = "Hello, World! Hello, Universe!";
         //    int lastIndex = str.LastIndexOf("Hello"); // Output: 14
-            
+
         //    //string.Split(char[] separator)
-            
+
         //    //Splits a string into an array of strings based on the specified separator characters.
-            
+
         //    string str = "Hello, World! Hello, Universe!";
         //    string[] words = str.Split(new char[] { ' ', '!', ',' });
-            
-            
+
+
         //    //string.Join(string separator, IEnumerable<string> values)
-            
+
         //    //Concatenates the elements of a specified array or collection, using the specified separator between each element.
-            
+
         //    string[] words = { "Hello", "World", "Universe" };
         //    string joinedStr = string.Join(", ", words); // Output: "Hello, World, Universe"
 
@@ -878,5 +882,96 @@ namespace AKSS_Management
         //    string joinedNumbers = string.Join(", ", numbers); // Output: "1, 2, 3, 4, 5"             
         //}
 
+        // Encrypt a string using AES
+
+
+
+        //string key = "0123456789abcdef"; // 16 bytes key for AES-128
+        //string iv = "abcdef0123456789"; // 16 bytes IV for AES-128
+        //string plainText = "Hello, World!";
+
+        //string encryptedText = EncryptionUtility.Encrypt(plainText, key, iv);
+        //Console.WriteLine($"Encrypted Text: {encryptedText}");
+
+        public static string Encrypt(string plainText, string key, string iv)
+        {
+            using (Aes aesAlg = Aes.Create())
+            {
+                aesAlg.Key = Encoding.UTF8.GetBytes(key);
+                aesAlg.IV = Encoding.UTF8.GetBytes(iv);
+
+                ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
+
+                using (MemoryStream msEncrypt = new MemoryStream())
+                {
+                    using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                    {
+                        using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                        {
+                            swEncrypt.Write(plainText);
+                        }
+                        return Convert.ToBase64String(msEncrypt.ToArray());
+                    }
+                }
+            }
         }
+
+
+        //string key = "0123456789abcdef"; // 16 bytes key for AES-128
+        //string iv = "abcdef0123456789"; // 16 bytes IV for AES-128
+        //string encryptedText = "Your Encrypted Text Here";
+
+        //string decryptedText = EncryptionUtility.Decrypt(encryptedText, key, iv);
+        //Console.WriteLine($"Decrypted Text: {decryptedText}");
+
+        // Decrypt a string using AES
+        public static string Decrypt(string cipherText, string key, string iv)
+        {
+            using (Aes aesAlg = Aes.Create())
+            {
+                aesAlg.Key = Encoding.UTF8.GetBytes(key);
+                aesAlg.IV = Encoding.UTF8.GetBytes(iv);
+
+                ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
+
+                using (MemoryStream msDecrypt = new MemoryStream(Convert.FromBase64String(cipherText)))
+                {
+                    using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+                    {
+                        using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                        {
+                            return srDecrypt.ReadToEnd();
+                        }
+                    }
+                }
+            }
+        }
+
+
+        //string plainTextPassword = "mySecurePassword";
+        //string encodedPassword = Base64EncodingUtility.Encode(plainTextPassword);
+        //Console.WriteLine($"Encoded Password: {encodedPassword}");
+
+        // Encode a password using Base64
+        public static string Encode(string plainText)
+        {
+            byte[] plainTextBytes = Encoding.UTF8.GetBytes(plainText);
+            return Convert.ToBase64String(plainTextBytes);
+        }
+
+        //string encodedPassword = "bXlTZWN1cmVQYXNzd29yZA=="; // Example Base64 encoded string
+        //string decodedPassword = Base64EncodingUtility.Decode(encodedPassword);
+        //Console.WriteLine($"Decoded Password: {decodedPassword}");
+
+        // Decode a password using Base64
+        public static string Decode(string base64EncodedData)
+        {
+            byte[] base64EncodedBytes = Convert.FromBase64String(base64EncodedData);
+            return Encoding.UTF8.GetString(base64EncodedBytes);
+        }
+
+
+
+
+    }
 }

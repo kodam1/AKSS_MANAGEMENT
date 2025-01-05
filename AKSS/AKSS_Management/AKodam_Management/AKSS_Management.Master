@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="AKSS_Management.Main" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AKSS_Management.master.cs" Inherits="AKSS_Management.AKodam_Management.AKSS_Management" %>
 
 <!DOCTYPE html>
 
@@ -8,29 +8,29 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dashboard - Akshay Kodam Software Solutions.</title>
+    <title>Dashboard - AKSS Management.</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="./../assets/img/favicon.png" rel="icon">
+    <link href="./../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
-    <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+    <link href="./../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="./../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="./../assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="./../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="./../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="./../assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="./../assets/css/style.css" rel="stylesheet">
 
     <!-- =======================================================
     * Template Name: NiceAdmin
@@ -40,7 +40,7 @@
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
     <asp:ContentPlaceHolder ID="head" runat="server">
-        
+
         <style >
             a{
                 cursor: pointer;
@@ -51,8 +51,10 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-  <%--  <form id="form1" runat="server">--%>
+    <form id="form1" runat="server">
         
+  <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
 
@@ -65,10 +67,13 @@
     </div><!-- End Logo -->
 
     <div class="search-bar">
-      <form class="search-form d-flex align-items-center" method="POST" action="#">
-        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-      </form>
+      <%--<form class="search-form d-flex align-items-center" method="POST" action="#">--%>
+        <div class="search-form d-flex align-items-center">
+             <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+             <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+        </div>
+       
+      <%--</form>--%>
     </div><!-- End Search Bar -->
 
     <nav class="header-nav ms-auto">
@@ -287,37 +292,36 @@
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
-      <%--<li class="nav-item">
+     <%-- <li class="nav-item">
         <a class="nav-link " href="/Default.aspx">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
       </li>--%>
 
-        <li class="nav-item">
-
-            <a class="nav-link collapsed" data-bs-target="#MainDashboard" data-bs-toggle="collapse" href="/Default.aspx">
-                <i class="bi bi-grid"></i><span>Dashboard</span><i class="bi bi-chevron-down ms-auto"></i>
+     <li class="nav-item">
+         
+        <a class="nav-link collapsed" data-bs-target="#MainDashboard" data-bs-toggle="collapse" href="/Default.aspx">
+          <i class="bi bi-grid"></i><span>Dashboard</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="MainDashboard" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="/Default.aspx">
+              <i class="bi bi-circle"></i><span>Nice Admin Dashboard</span>
             </a>
-            <ul id="MainDashboard" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                <li>
-                    <a href="/Default.aspx">
-                        <i class="bi bi-circle"></i><span>Nice Admin Dashboard</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/DefaultAKSS.aspx">
-                        <i class="bi bi-circle"></i><span>AKSS Dashboard</span>
-                    </a>
-                </li>
-                <%-- <li>
-                         <a href="/AKodam_Management/icons-boxicons.aspx">
-                           <i class="bi bi-circle"></i><span>Boxicons</span>
-                         </a>
-                       </li>--%>
-            </ul>
-        </li>
-        
+          </li>
+          <li>
+            <a href="/DefaultAKSS.aspx">
+              <i class="bi bi-circle"></i><span>AKSS Dashboard</span>
+            </a>
+          </li>
+         <%-- <li>
+            <a href="/AKodam_Management/icons-boxicons.aspx">
+              <i class="bi bi-circle"></i><span>Boxicons</span>
+            </a>
+          </li>--%>
+        </ul>
+      </li>
       <!-- End Dashboard Nav -->
 
       <li class="nav-item">
@@ -326,11 +330,16 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
+           <a href="/NiceAdminComponent/components-alerts.aspx">
+             <i class="bi bi-circle"></i><span>Alerts</span>
+           </a>
+         </li>
+          <%--  <li>
             <a href="/NiceAdminComponent/components-alerts.aspx">
               <i class="bi bi-circle"></i><span>Alerts</span>
             </a>
           </li>
-          <li>
+        <li>
             <a href="/NiceAdminComponent/components-accordion.aspx">
               <i class="bi bi-circle"></i><span>Accordion</span>
             </a>
@@ -394,11 +403,26 @@
             <a href="/NiceAdminComponent/components-tooltips.aspx">
               <i class="bi bi-circle"></i><span>Tooltips</span>
             </a>
-          </li>
+          </li>--%>
         </ul>
-      </li><!-- End Components Nav -->
+      </li>
+      <!-- End Components Nav -->
 
-      <li class="nav-item">
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#AdminPanel" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-menu-button-wide"></i><span>Admin Panel</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="AdminPanel" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="/AdminPanel/UserMaster.aspx">
+                        <i class="bi bi-circle"></i><span>User Master</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        
+
+    <%--  <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
@@ -424,9 +448,10 @@
             </a>
           </li>
         </ul>
-      </li><!-- End Forms Nav -->
+      </li>--%>
+      <!-- End Forms Nav -->
 
-      <li class="nav-item">
+     <%-- <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
@@ -442,9 +467,10 @@
             </a>
           </li>
         </ul>
-      </li><!-- End Tables Nav -->
+      </li>--%>
+      <!-- End Tables Nav -->
 
-      <li class="nav-item">
+   <%--   <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-bar-chart"></i><span>Charts</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
@@ -465,9 +491,10 @@
             </a>
           </li>
         </ul>
-      </li><!-- End Charts Nav -->
+      </li>--%>
+      <!-- End Charts Nav -->
 
-      <li class="nav-item">
+   <%--   <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
@@ -488,7 +515,8 @@
             </a>
           </li>
         </ul>
-      </li><!-- End Icons Nav -->
+      </li>--%>
+      <!-- End Icons Nav -->
 
       <li class="nav-heading">Pages</li>
 
@@ -497,49 +525,56 @@
           <i class="bi bi-person"></i>
           <span>Profile</span>
         </a>
-      </li><!-- End Profile Page Nav -->
+      </li>
+      <!-- End Profile Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="/NiceAdminComponent/pages-faq.aspx">
           <i class="bi bi-question-circle"></i>
           <span>F.A.Q</span>
         </a>
-      </li><!-- End F.A.Q Page Nav -->
+      </li>
+      <!-- End F.A.Q Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="/NiceAdminComponent/pages-contact.aspx">
           <i class="bi bi-envelope"></i>
           <span>Contact</span>
         </a>
-      </li><!-- End Contact Page Nav -->
+      </li>
+      <!-- End Contact Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="/pages-register.aspx">
           <i class="bi bi-card-list"></i>
           <span>Register</span>
         </a>
-      </li><!-- End Register Page Nav -->
+      </li>
+      <!-- End Register Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="/pages-login.aspx">
           <i class="bi bi-box-arrow-in-right"></i>
           <span>Login</span>
         </a>
-      </li><!-- End Login Page Nav -->
+      </li>
+      <!-- End Login Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="/NiceAdminComponent/pages-error-404.aspx">
           <i class="bi bi-dash-circle"></i>
           <span>Error 404</span>
         </a>
-      </li><!-- End Error 404 Page Nav -->
+      </li>
+      <!-- End Error 404 Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="/NiceAdminComponent/pages-blank.aspx">
           <i class="bi bi-file-earmark"></i>
           <span>Blank</span>
         </a>
-      </li><!-- End Blank Page Nav -->
+      </li>
+      <!-- End Blank Page Nav -->
 
     </ul>
 
@@ -583,16 +618,6 @@
   <!-- Template Main JS File -->
   <script src="./../assets/js/main.js"></script>
 
-    <%--</form>--%>
+    </form>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
