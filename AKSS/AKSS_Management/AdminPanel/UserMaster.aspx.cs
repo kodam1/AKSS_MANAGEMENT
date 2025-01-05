@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml.Linq;
 using static System.Collections.Specialized.BitVector32;
+using System.Configuration;
+ 
 
 namespace AKSS_Management.AdminPanel
 {
@@ -30,8 +33,36 @@ namespace AKSS_Management.AdminPanel
         {
             BtnSave.Text = "Submit";
             GetMaxId();
+            Bind_gvUserMaster();
         }
 
+        public async void Bind_gvUserMaster()
+        {
+            try
+            {
+                string spname = "CRUD_UserMaster";
+                SqlParameter[] parameters = {
+                    new SqlParameter("@CRUD_Action", "GET_ALL"),
+                };
+                DataTable dt = await CommonUtility.ExecuteStoredProcedureDataTableAsync(spname, parameters);
+
+                if (dt.Rows.Count > 0)
+                {
+                    gvUserMaster.DataSource = dt;
+                    gvUserMaster.DataBind();
+                }
+                else
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "Bind_gvUserMaster", "alert('Data Not Present !');", true);
+                    gvUserMaster.DataSource = null;
+                    gvUserMaster.DataBind();
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
         public async void GetMaxId()
         {
             try
@@ -283,6 +314,85 @@ namespace AKSS_Management.AdminPanel
             {
                 throw;
             }
+        }
+
+        protected async void BtnExportToExcel_Click(object sender, EventArgs e)
+        {
+            string spname = "CRUD_UserMaster";            
+            SqlParameter[] parameters = {
+                    new SqlParameter("@CRUD_Action", "GET_ALL")                    
+                };
+            DataTable dt = await CommonUtility.ExecuteStoredProcedureDataTableAsync(spname, parameters);
+
+            if (dt.Rows.Count > 0)
+            {
+               // dt = city.GetAllCity();//your datatable
+                string attachment = "attachment; filename=UserMaster.xls";
+                Response.ClearContent();
+                Response.AddHeader("content-disposition", attachment);
+                Response.ContentType = "application/vnd.ms-excel";
+                string tab = "";
+                foreach (DataColumn dc in dt.Columns)
+                {
+                    Response.Write(tab + dc.ColumnName);
+                    tab = "\t";
+                }
+                Response.Write("\n");
+                int i;
+                foreach (DataRow dr in dt.Rows)
+                {
+                    tab = "";
+                    for (i = 0; i < dt.Columns.Count; i++)
+                    {
+                        Response.Write(tab + dr[i].ToString());
+                        tab = "\t";
+                    }
+                    Response.Write("\n");
+                }
+                Response.End();
+            }
+        }
+
+        public override void VerifyRenderingInServerForm(Control control)
+        {
+            //required to avoid the runtime error "
+            //Control 'GridView1' of type 'GridView' must be placed inside a form tag with runat=server."
+        }
+
+        private void ExportGridToExcel()
+        {
+            Response.Clear();
+            Response.Buffer = true;
+            Response.ClearContent();
+            Response.ClearHeaders();
+            Response.Charset = "";
+            string FileName = "UserMaster" + DateTime.Now + ".xls";
+            StringWriter strwritter = new StringWriter();
+            HtmlTextWriter htmltextwrtter = new HtmlTextWriter(strwritter);
+            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            Response.ContentType = "application/vnd.ms-excel";
+            Response.AddHeader("Content-Disposition", "attachment;filename=" + FileName);
+            gvUserMaster.GridLines = GridLines.Both;
+            gvUserMaster.HeaderStyle.Font.Bold = true;
+            gvUserMaster.RenderControl(htmltextwrtter);
+            Response.Write(strwritter.ToString());
+            Response.End();
+        }
+
+        protected void btnSent_Click(object sender, EventArgs e)
+        {
+            // use the API URL here  
+            string strUrl = "http://api.mVaayoo.com/mvaayooapi/MessageCompose?user=YourUserName:YourPassword&senderID=YourSenderID&    receipientno=1234567890&msgtxt=This is a test from mVaayoo API&state=4";
+            // Create a request object  
+            WebRequest request = HttpWebRequest.Create(strUrl);
+            // Get the response back  
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            Stream s = (Stream)response.GetResponseStream();
+            StreamReader readStream = new StreamReader(s);
+            string dataString = readStream.ReadToEnd();
+            response.Close();
+            s.Close();
+            readStream.Close();
         }
 
     }

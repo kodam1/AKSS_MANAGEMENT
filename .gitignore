@@ -15,3 +15,8 @@
 /AKSS/packages
 /AKSS/.vs/AKSS
 /AKSS/AKSS.sln
+/AKSS/AKSS_Management/bin/AKSS_Management.dll
+/AKSS/AKSS_Management/bin/AKSS_Management.pdb
+/AKSS/AKSS_Management/obj/Debug/AKSS_Management.dll
+/AKSS/AKSS_Management/obj/Debug/AKSS_Management.csproj.AssemblyReference.cache
+/AKSS/AKSS_Management/obj/Debug/AKSS_Management.pdb

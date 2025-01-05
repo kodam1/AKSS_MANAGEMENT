@@ -109,7 +109,8 @@
                     <%--<asp:Button ID="btnUpdate" runat="server" Text="Modify" OnClick="BtnUpdate_Click" class="btn btn-primary"/>--%>
                      <asp:Button ID="BtnDelete" runat="server" Text="Delete" OnClick="BtnDelete_Click" type="reset" class="btn btn-danger"/>
                     <asp:Button ID="BtnReset" runat="server" Text="Reset" OnClick="BtnReset_Click" type="reset" class="btn btn-secondary"/>
-
+                    <asp:Button ID="BtnExportToExcel" runat="server" Text="Export To Excel" OnClick="BtnExportToExcel_Click" class="btn btn-primary"/>
+                    
                 </div>
               </div>
               <!-- End floating Labels Form -->
@@ -119,7 +120,38 @@
 
         </div>
       </div>
+
     </asp:Panel>
+
+     <asp:Panel ID="PnlGV" runat="server" class="card" ScrollBars="Auto" Width="100%" >
+        <%-- <div class="pagetitle">
+          <h3 class="mb-3">User Master List</h3>
+         </div>--%>
+
+         <div class="row">
+             <div class="col-lg-12">
+                 <div class="card-body">
+                     <h5 class="card-title">User Master List</h5>
+
+                     <asp:GridView ID="gvUserMaster" runat="server" AutoGenerateColumns="false" CssClass="table datatable" 
+                         DataKeyNames="UserId" ShowHeader="true">
+                         <Columns>
+                             <asp:BoundField DataField="UserId" HeaderText="User Id" />
+                             <asp:BoundField DataField="UserName" HeaderText="User Name" />
+                             <asp:BoundField DataField="Email" HeaderText="Email" />
+                             <%-- <asp:BoundField DataField="PasswordHash" HeaderText="Password" />--%>
+                             <asp:BoundField DataField="FullName" HeaderText="FullName" />
+                             <asp:BoundField DataField="Role" HeaderText="Role" />
+                             <asp:BoundField DataField="PhoneNumber" HeaderText="PhoneNumber" />
+                             <asp:BoundField DataField="IsActive" HeaderText="Active" />
+
+                         </Columns>
+                     </asp:GridView>
+                 </div>
+             </div>
+         </div>
+
+     </asp:Panel>
     </section>
 
   </main><!-- End #main -->
