@@ -326,12 +326,12 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-menu-button-wide"></i><span>Components</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-menu-button-wide"></i><span>Pages</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-           <a href="/NiceAdminComponent/components-alerts.aspx">
-             <i class="bi bi-circle"></i><span>Alerts</span>
+           <a href="/AKodam_Management/AKSS_Code.aspx">
+             <i class="bi bi-circle"></i><span>AKSS ShortCut Code</span>
            </a>
          </li>
           <%--  <li>

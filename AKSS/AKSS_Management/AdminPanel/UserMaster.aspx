@@ -134,7 +134,7 @@
                      <h5 class="card-title">User Master List</h5>
 
                      <asp:GridView ID="gvUserMaster" runat="server" AutoGenerateColumns="false" CssClass="table datatable" 
-                         DataKeyNames="UserId" ShowHeader="true">
+                          ShowHeader="true">
                          <Columns>
                              <asp:BoundField DataField="UserId" HeaderText="User Id" />
                              <asp:BoundField DataField="UserName" HeaderText="User Name" />
