@@ -835,6 +835,40 @@ h6 {
   background: #ffecdf;
 }
 
+/*start akshay CMIS Dashboard card */
+
+.dashboard .appointment-card .card-icon {
+    color: #ff771d;
+    background: #ffecdf;
+}
+
+.dashboard .patient-card .card-icon {
+    color: #ff771d;
+    background: #ffecdf;
+}
+
+.dashboard .billing-expenses-card .card-icon {
+    color: #ff771d;
+    background: #ffecdf;
+}
+
+.dashboard .medicines-card .card-icon {
+    color: #ff771d;
+    background: #ffecdf;
+}
+
+.dashboard .prescriptions-card .card-icon {
+    color: #ff771d;
+    background: #ffecdf;
+}
+
+.dashboard .lab-reports-card .card-icon {
+    color: #ff771d;
+    background: #ffecdf;
+}
+
+/*start akshay CMIS Dashboard card */
+
 /* Activity */
 .dashboard .activity {
   font-size: 14px;

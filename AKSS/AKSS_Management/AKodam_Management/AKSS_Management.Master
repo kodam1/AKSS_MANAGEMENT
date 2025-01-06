@@ -315,6 +315,11 @@
               <i class="bi bi-circle"></i><span>AKSS Dashboard</span>
             </a>
           </li>
+            <li>
+                <a href="/DefaultCMIS.aspx">
+                    <i class="bi bi-circle"></i><span>CMIS Dashboard</span>
+                </a>
+            </li>
          <%-- <li>
             <a href="/AKodam_Management/icons-boxicons.aspx">
               <i class="bi bi-circle"></i><span>Boxicons</span>
