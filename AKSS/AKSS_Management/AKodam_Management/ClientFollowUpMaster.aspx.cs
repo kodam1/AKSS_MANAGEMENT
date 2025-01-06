@@ -21,7 +21,7 @@ namespace AKSS_Management.AKodam_Management
         {
             if (!IsPostBack)
             {
-                if (Request.QueryString["ClientId"] != "")
+                if (Request.QueryString["ClientId"] != null)
                 {
                     // int ClientId = Convert.ToInt32(Request.QueryString["ClientId"].ToString());
                     txtClientId.Text = Request.QueryString["ClientId"].ToString();

@@ -417,6 +417,8 @@
     <Content Include="assets\vendor\tinymce\themes\silver\theme.min.js" />
     <Content Include="assets\vendor\tinymce\tinymce.js" />
     <Content Include="assets\vendor\tinymce\tinymce.min.js" />
+    <Content Include="CMIS\CMIS_Appointment.aspx" />
+    <Content Include="CMIS\CMIS_Clinic_Master.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DefaultAKSS.aspx" />
     <Content Include="DefaultCMIS.aspx" />
@@ -448,6 +450,15 @@
     <Content Include="NiceAdminComponent\pages-contact.aspx" />
     <Content Include="NiceAdminComponent\pages-error-404.aspx" />
     <Content Include="NiceAdminComponent\pages-faq.aspx" />
+    <Content Include="Notes\SelfNotes.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SelfNotes.txt</LastGenOutput>
+    </Content>
+    <Content Include="Notes\SelfNotes.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SelfNotes.tt</DependentUpon>
+    </Content>
     <Content Include="pages-login.aspx" />
     <Content Include="pages-register.aspx" />
     <Content Include="NiceAdminComponent\tables-data.aspx" />
@@ -850,6 +861,20 @@
     </Compile>
     <Compile Include="CMIS\CMIS.Master.designer.cs">
       <DependentUpon>CMIS.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Appointment.aspx.cs">
+      <DependentUpon>CMIS_Appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Appointment.aspx.designer.cs">
+      <DependentUpon>CMIS_Appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Clinic_Master.aspx.cs">
+      <DependentUpon>CMIS_Clinic_Master.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Clinic_Master.aspx.designer.cs">
+      <DependentUpon>CMIS_Clinic_Master.aspx</DependentUpon>
     </Compile>
     <Compile Include="CommonLogicHelper.cs" />
     <Compile Include="CommonUtility.cs" />
@@ -1523,6 +1548,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="HMIS\" />

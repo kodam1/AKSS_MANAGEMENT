@@ -329,10 +329,16 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-           <a href="/AKodam_Management/ClientFollowUpMaster.aspx">
+           <a href="/CMIS/CMIS_Clinic_Master.aspx">
              <i class="bi bi-circle"></i><span>Clinic Master</span>
            </a>
          </li>
+         <li>
+           <a href="/CMIS/CMIS_Appointment.aspx">
+             <i class="bi bi-circle"></i><span>Appointment</span>
+           </a>
+         </li>
+            
      <%--    <li>
            <a href="/AKodam_Management/ClientFollowUpMasterList.aspx">
              <i class="bi bi-circle"></i><span>Client Follow Up Master List</span>
