@@ -423,6 +423,8 @@
     <Content Include="CMIS\CMIS_Billing_Expenses_Details.aspx" />
     <Content Include="CMIS\CMIS_Clinic_Master.aspx" />
     <Content Include="CMIS\CMIS_Create_Billing_Expenses.aspx" />
+    <Content Include="CMIS\CMIS_Create_Lab_Reports.aspx" />
+    <Content Include="CMIS\CMIS_Create_Lab_Reports_Details.aspx" />
     <Content Include="CMIS\CMIS_Create_Medicine.aspx" />
     <Content Include="CMIS\CMIS_Create_Patient.aspx" />
     <Content Include="CMIS\CMIS_Create_Prescription.aspx" />
@@ -913,6 +915,20 @@
     </Compile>
     <Compile Include="CMIS\CMIS_Create_Billing_Expenses.aspx.designer.cs">
       <DependentUpon>CMIS_Create_Billing_Expenses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Create_Lab_Reports.aspx.cs">
+      <DependentUpon>CMIS_Create_Lab_Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Create_Lab_Reports.aspx.designer.cs">
+      <DependentUpon>CMIS_Create_Lab_Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Create_Lab_Reports_Details.aspx.cs">
+      <DependentUpon>CMIS_Create_Lab_Reports_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Create_Lab_Reports_Details.aspx.designer.cs">
+      <DependentUpon>CMIS_Create_Lab_Reports_Details.aspx</DependentUpon>
     </Compile>
     <Compile Include="CMIS\CMIS_Create_Medicine.aspx.cs">
       <DependentUpon>CMIS_Create_Medicine.aspx</DependentUpon>
