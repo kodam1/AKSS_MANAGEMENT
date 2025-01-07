@@ -1,7 +1,6 @@
-﻿<%@ Page Title="Patient Details" Async="true"  Language="C#" MasterPageFile="~/CMIS/CMIS.Master" 
-    AutoEventWireup="true" CodeBehind="CMIS_Patient_Details.aspx.cs" 
-    Inherits="AKSS_Management.CMIS.CMIS_Patient_Details" %>
-
+﻿<%@ Page Title="Medicine Details" Async="true" Language="C#" MasterPageFile="~/CMIS/CMIS.Master" 
+    AutoEventWireup="true" CodeBehind="CMIS_Medicine_Details.aspx.cs" 
+    Inherits="AKSS_Management.CMIS.CMIS_Medicine_Details" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -24,7 +23,7 @@
 
      <asp:Panel ID="Panel1" runat="server" class="card"  >
          <div class="pagetitle my-3 mx-3">
-             <h1>Patient Details</h1>
+             <h1>Medicine Details</h1>
          </div>
 
       <div class="row">
@@ -35,14 +34,13 @@
             <div class="card-body">
               <%--<h5 class="card-title">Appointment Details</h5> --%>
                 
-                
               <div class="row g-3 my-3 mb-3"  style="display:none;">
     
               <div class="text-center">
                 <%--<button type="submit" class="btn btn-primary">Submit</button>
                 <button type="reset" class="btn btn-secondary">Reset</button>--%>
 
-                  <asp:Button ID="BtnSave" runat="server" Text="Create Patient" class="btn btn-primary" Visible="false"/> <%--OnClick="BtnSave_Click" --%>
+                  <asp:Button ID="BtnSave" runat="server" Text="Submit" class="btn btn-primary" Visible="false"/> <%--OnClick="BtnSave_Click" --%>
                    <asp:Button ID="BtnPrint" runat="server" Text="Print" class="btn btn-primary" Visible="false"/> <%--OnClick="BtnSave_Click" --%>
                   <%--<asp:Button ID="btnUpdate" runat="server" Text="Modify" OnClick="BtnUpdate_Click" class="btn btn-primary"/>--%>
                    <asp:Button ID="BtnDelete" runat="server" Text="Delete"  type="reset"  class="btn btn-danger"  Visible="false"/> <%--OnClick="BtnDelete_Click"--%>
@@ -122,89 +120,40 @@
             </div>
 
 
-
                 <div class="row mb-3">
-                    <label for="LblPatientID" class="col-sm-12 col-form-label">Patient ID</label>
+                    <label for="LblMedicineID" class="col-sm-12 col-form-label">Medicine ID</label>
                     <div class="col-sm-12">
-                        <asp:Label ID="LblPatientID_Data" runat="server" class="col-form-label" Text="1" Font-Bold="True"></asp:Label>
+                        <asp:Label ID="LblMedicineID_Data" runat="server" class="col-form-label" Text="2" Font-Bold="True"></asp:Label>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="LblFirstName" class="col-sm-12 col-form-label">First Name</label>
+                    <label for="LblTitle" class="col-sm-12 col-form-label">Title</label>
                     <div class="col-sm-12">
-                        <asp:Label ID="LblFirstName_Data" runat="server" class="col-form-label" Text="Sam" Font-Bold="True"></asp:Label>
+                        <asp:Label ID="LblTitle_Data" runat="server" class="col-form-label" Text="Ceredon 10mg" Font-Bold="True"></asp:Label>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="LblLastName" class="col-sm-12 col-form-label">Last Name</label>
+                    <label for="LblCategory" class="col-sm-12 col-form-label">Category</label>
                     <div class="col-sm-12">
-                        <asp:Label ID="LblLastName_Data" runat="server" class="col-form-label" Text="Willow" Font-Bold="True"></asp:Label>
+                        <asp:Label ID="LblCategory_Data" runat="server" class="col-form-label" Text="Topical" Font-Bold="True"></asp:Label>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="LblContactNumber" class="col-sm-12 col-form-label">Contact Number</label>
+                    <label for="LblDailyInterval" class="col-sm-12 col-form-label">Daily Interval</label>
                     <div class="col-sm-12">
-                        <asp:Label ID="LblContactNumber_Data" runat="server" class="col-form-label" Text="+91 923438712" Font-Bold="True"></asp:Label>
+                        <asp:Label ID="LblDailyInterval_Data" runat="server" class="col-form-label" Text="Daily Morning" Font-Bold="True"></asp:Label>
                     </div>
-                </div>
+                </div>   
                 <div class="row mb-3">
-                    <label for="LblEmail" class="col-sm-12 col-form-label">Email</label>
+                    <label for="LblBeforeMeal" class="col-sm-12 col-form-label">Before Meal</label>
                     <div class="col-sm-12">
-                        <asp:Label ID="LblEmail_Data" runat="server" class="col-form-label" Text="sam@123" Font-Bold="True"></asp:Label>
+                        <asp:Label ID="LblBeforeMeal_Data" runat="server" class="col-form-label" Text="After meal" Font-Bold="True"></asp:Label>
                     </div>
-                </div>
+                </div>                   
                 <div class="row mb-3">
-                    <label for="LblGender" class="col-sm-12 col-form-label">Gender</label>
+                    <label for="LblDescriptions" class="col-sm-12 col-form-label">Descriptions</label>
                     <div class="col-sm-12">
-                        <asp:Label ID="LblGender_Data" runat="server" class="col-form-label" Text="Male" Font-Bold="True"></asp:Label>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="LblAge" class="col-sm-12 col-form-label">Age</label>
-                    <div class="col-sm-12">
-                        <asp:Label ID="LblAge_Data" runat="server" class="col-form-label" Text="19" Font-Bold="True"></asp:Label>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="LblBloodGroup" class="col-sm-12 col-form-label">Blood Group</label>
-                    <div class="col-sm-12">
-                        <asp:Label ID="LblBloodGroup_Data" runat="server" class="col-form-label" Text="B negative (2%)" Font-Bold="True"></asp:Label>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="LblWeight" class="col-sm-12 col-form-label">Weight</label>
-                    <div class="col-sm-12">
-                        <asp:Label ID="LblWeight_Data" runat="server" class="col-form-label" Text="55" Font-Bold="True"></asp:Label>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="LblHeight" class="col-sm-12 col-form-label">Height</label>
-                    <div class="col-sm-12">
-                        <asp:Label ID="LblHeight_Data" runat="server" class="col-form-label" Text="5.2" Font-Bold="True"></asp:Label>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="LblBP" class="col-sm-12 col-form-label">BP</label>
-                    <div class="col-sm-12">
-                        <asp:Label ID="LblBP_Data" runat="server" class="col-form-label" Text="19" Font-Bold="True"></asp:Label>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="LblSymptoms" class="col-sm-12 col-form-label">Symptoms</label>
-                    <div class="col-sm-12">
-                        <asp:Label ID="LblSymptoms_Data" runat="server" class="col-form-label" Text="Body pain & headche" Font-Bold="True"></asp:Label>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="LblAddress" class="col-sm-12 col-form-label">Address</label>
-                    <div class="col-sm-12">
-                        <asp:Label ID="LblAddress_Data" runat="server" class="col-form-label" Text="Bhiwandi pipeline" Font-Bold="True"></asp:Label>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="LblNotes" class="col-sm-12 col-form-label">Notes</label>
-                    <div class="col-sm-12">
-                        <asp:Label ID="LblNotes_Data" runat="server" class="col-form-label" Text="High work pressure body and headche" Font-Bold="True"></asp:Label>
+                        <asp:Label ID="LblDescriptions_Data" runat="server" class="col-form-label" Text="Tablet used for body pain & headache" Font-Bold="True"></asp:Label>
                     </div>
                 </div>
             </div>

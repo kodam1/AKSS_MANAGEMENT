@@ -35,7 +35,8 @@
             <div class="card-body">
               <%--<h5 class="card-title">Appointment Details</h5> --%>
                 
-              <div class="row g-3 my-3 mb-3"  style="display:block;">
+                
+              <div class="row g-3 my-3 mb-3"  style="display:none;">
     
               <div class="text-center">
                 <%--<button type="submit" class="btn btn-primary">Submit</button>
@@ -50,8 +51,8 @@
       
               </div>
 
-             <div class="text-center" style="margin-top: 5px !important;display:block;" >
-                 <a id="BtnSelectPatient" runat="server" class="btn btn-primary btn-lg"><i class="bi bi-card-checklist me-1"></i>Select</a>
+             <div class="text-center" style="margin-top: 5px !important;display:none;" >
+                 <a id="BtnSelectPatient" runat="server" class="btn btn-primary btn-lg"><i class="bi bi-card-checklist me-1"></i><br /><span style="font-size:small;margin-top:-5px" >Select</span></a>
                  <a id="A1" runat="server" class="btn btn-primary btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Print"     ><i class="bx bx-printer me-1"></i>Print</a>
                  <a id="A2" runat="server" class="btn btn-primary btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"      ><i class="bx bxs-edit me-1"></i>Edit</a>
                  <a id="A3" runat="server" class="btn btn-primary btn-lg" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete"    ><i class="bx bxs-trash-alt me-1"></i>Delete</a>
@@ -69,7 +70,7 @@
 
             </div>
 
-              <div class="text-center gx-3 mb-3">
+              <div class="text-center gx-3 mb-3" style="margin-top: 5px !important;display:none;" >
                    <br />
                 <a id="A91" runat="server" class="btn btn-dark btn-lg m-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Select"><i class="bi bi-card-checklist me-1"></i> </a>
                 <a id="A10" runat="server" class="btn btn-dark btn-lg m-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Print"><i class="bx bx-printer me-1"></i> </a>
@@ -86,7 +87,7 @@
                     </button>
               </div>
 
-                <div class="text-center gx-3 mb-3">
+                <div class="text-center gx-3 mb-3" style="margin-top: 5px !important;display:none;" >
                      <br />
                   <a id="A26" runat="server" class="btn btn-primary btn-lg m-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Select"><i class="bi bi-card-checklist me-1"></i> </a>
                   <a id="A27" runat="server" class="btn btn-primary btn-lg m-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Print"><i class="bx bx-printer me-1"></i> </a>
@@ -115,10 +116,11 @@
               <a id="A24" runat="server" class="btn btn-success btn-lg m-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="WhatsApp"><i class="bx bxl-whatsapp me-1"></i> </a>
               <a id="A25" runat="server" class="btn btn-warning btn-lg m-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Mail"><i class="bx bx-mail-send me-1"></i> </a>
    
-                 <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom" style="display:none;" >
+<%--                 <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom" style="display:none;" >
                     Tooltip on bottom
-                  </button>
+                  </button>--%>
             </div>
+
 
               <div class="row g-3 " style="display:none;">
                   <div class="col-md-12 mb-3" >
