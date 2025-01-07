@@ -343,6 +343,16 @@
              <i class="bi bi-circle"></i><span>Appointment Details</span>
            </a>
          </li>            
+         <li>
+           <a href="/CMIS/CMIS_Create_Patient.aspx">
+             <i class="bi bi-circle"></i><span>Patient</span>
+           </a>
+         </li>
+         <li>
+           <a href="/CMIS/CMIS_Patient_Details.aspx">
+             <i class="bi bi-circle"></i><span>Patient Details</span>
+           </a>
+         </li>    
             
      <%--    <li>
            <a href="/AKodam_Management/ClientFollowUpMasterList.aspx">

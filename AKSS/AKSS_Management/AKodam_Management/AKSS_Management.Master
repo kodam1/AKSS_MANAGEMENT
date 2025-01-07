@@ -422,6 +422,20 @@
           </li>--%>
         </ul>
       </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#AKSSCustomComponent" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-menu-button-wide"></i><span>AKSS Custom Component</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="AKSSCustomComponent" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="/AKodam_Management/AKSS_Component_Icon_Button.aspx">
+                        <i class="bi bi-circle"></i><span>Icon Button</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        
       <!-- End Components Nav -->
 
         <li class="nav-item">

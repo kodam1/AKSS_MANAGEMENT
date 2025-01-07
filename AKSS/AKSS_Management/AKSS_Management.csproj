@@ -421,6 +421,8 @@
     <Content Include="CMIS\CMIS_Appointment.aspx" />
     <Content Include="CMIS\CMIS_Appointment_Details.aspx" />
     <Content Include="CMIS\CMIS_Clinic_Master.aspx" />
+    <Content Include="CMIS\CMIS_Create_Patient.aspx" />
+    <Content Include="CMIS\CMIS_Patient_Details.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DefaultAKSS.aspx" />
     <Content Include="DefaultCMIS.aspx" />
@@ -891,6 +893,20 @@
     </Compile>
     <Compile Include="CMIS\CMIS_Clinic_Master.aspx.designer.cs">
       <DependentUpon>CMIS_Clinic_Master.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Create_Patient.aspx.cs">
+      <DependentUpon>CMIS_Create_Patient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Create_Patient.aspx.designer.cs">
+      <DependentUpon>CMIS_Create_Patient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Patient_Details.aspx.cs">
+      <DependentUpon>CMIS_Patient_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Patient_Details.aspx.designer.cs">
+      <DependentUpon>CMIS_Patient_Details.aspx</DependentUpon>
     </Compile>
     <Compile Include="CommonLogicHelper.cs" />
     <Compile Include="CommonUtility.cs" />
