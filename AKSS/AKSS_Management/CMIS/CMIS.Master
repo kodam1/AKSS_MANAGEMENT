@@ -373,6 +373,16 @@
              <i class="bi bi-circle"></i><span>Medicine Details</span>
            </a>
          </li> 
+         <li>
+           <a href="/CMIS/CMIS_Create_Prescription.aspx">
+             <i class="bi bi-circle"></i><span>Prescription</span>
+           </a>
+         </li>
+         <li>
+           <a href="/CMIS/CMIS_Create_Prescription_Details.aspx">
+             <i class="bi bi-circle"></i><span>Prescription Details</span>
+           </a>
+         </li> 
             
      <%--    <li>
            <a href="/AKodam_Management/ClientFollowUpMasterList.aspx">
