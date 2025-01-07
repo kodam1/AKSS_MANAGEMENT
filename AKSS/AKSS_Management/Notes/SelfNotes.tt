@@ -15,11 +15,47 @@ if (Request.QueryString["ClientId"] != null)
     txtClientId.Text = Request.QueryString["ClientId"].ToString();
     txtClientId_TextChanged(sender, e);
 }
+---------------------------------
+
+Icon Buttons
+
+     <div class="iconslist">
+        <div class="icon">
+          <i class="bx bx-printer"></i>
+          <div class="label">bx-printer</div>
+        </div>
+        <div class="icon">
+          <i class="bx bxs-edit"></i>
+          <div class="label">bxs-edit</div>
+        </div>
+        <div class="icon">
+          <i class="bx bxs-trash-alt"></i>
+          <div class="label">bxs-trash-alt</div>
+        </div>
+        <div class="icon">
+          <i class="bx bx-copy"></i>
+          <div class="label">bx-copy</div>
+        </div>
+        <div class="icon">
+          <i class="bx bxs-phone-call"></i>
+          <div class="label">bxs-phone-call</div>
+        </div>
+        <div class="icon">
+          <i class="bx bxs-message-alt-detail"></i>
+          <div class="label">bxs-message-alt-detail</div>
+        </div>
+        <div class="icon">
+          <i class="bx bxl-whatsapp"></i>
+          <div class="label">bxl-whatsapp</div>
+        </div>
+        <div class="icon">
+          <i class="bx bx-mail-send"></i>
+          <div class="label">bx-mail-send</div>
+        </div>
+     </div>
 
 
-
-
-
+       style="margin: 5px !important;"
 
 
 

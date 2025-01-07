@@ -110,6 +110,7 @@
   <ItemGroup>
     <Content Include="AdminPanel\UserMaster.aspx" />
     <Content Include="AKodam_Management\AKSS_Code.aspx" />
+    <Content Include="AKodam_Management\AKSS_Component_Icon_Button.aspx" />
     <Content Include="AKodam_Management\ClientFollowUpMaster.aspx" />
     <Content Include="AKodam_Management\ClientFollowUpMasterList.aspx" />
     <Content Include="AKodam_Management\EmpDemo.aspx" />
@@ -418,6 +419,7 @@
     <Content Include="assets\vendor\tinymce\tinymce.js" />
     <Content Include="assets\vendor\tinymce\tinymce.min.js" />
     <Content Include="CMIS\CMIS_Appointment.aspx" />
+    <Content Include="CMIS\CMIS_Appointment_Details.aspx" />
     <Content Include="CMIS\CMIS_Clinic_Master.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DefaultAKSS.aspx" />
@@ -820,6 +822,13 @@
     <Compile Include="AKodam_Management\AKSS_Code.aspx.designer.cs">
       <DependentUpon>AKSS_Code.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AKodam_Management\AKSS_Component_Icon_Button.aspx.cs">
+      <DependentUpon>AKSS_Component_Icon_Button.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AKodam_Management\AKSS_Component_Icon_Button.aspx.designer.cs">
+      <DependentUpon>AKSS_Component_Icon_Button.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AKodam_Management\AKSS_Management.Master.cs">
       <DependentUpon>AKSS_Management.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -868,6 +877,13 @@
     </Compile>
     <Compile Include="CMIS\CMIS_Appointment.aspx.designer.cs">
       <DependentUpon>CMIS_Appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Appointment_Details.aspx.cs">
+      <DependentUpon>CMIS_Appointment_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMIS\CMIS_Appointment_Details.aspx.designer.cs">
+      <DependentUpon>CMIS_Appointment_Details.aspx</DependentUpon>
     </Compile>
     <Compile Include="CMIS\CMIS_Clinic_Master.aspx.cs">
       <DependentUpon>CMIS_Clinic_Master.aspx</DependentUpon>
