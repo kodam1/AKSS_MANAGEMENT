@@ -78,7 +78,7 @@
                                  </div>
                                  <div class="col-md-4 mb-3">
                                      <div class="form-floating mb-3">
-                                         <asp:DropDownList ID="DdlPageFunction" runat="server" class="form-select" aria-label="DdlPageFunction">
+                                         <asp:DropDownList ID="DdlDeveloperPageFunction" runat="server" class="form-select" aria-label="DdlDeveloperPageFunction">
                                              <asp:ListItem Value="Select Page Function" Text="Select Page Function" Selected="True">Select Page Function</asp:ListItem>
                                              <asp:ListItem Value="Namespaces" Text="Namespaces" >Namespaces</asp:ListItem>
                                              <asp:ListItem Value="Page_Load" Text="Page_Load" >Page_Load</asp:ListItem>
@@ -96,12 +96,12 @@
                                              <asp:ListItem Value="BtnExportToExcel_Click" Text="BtnExportToExcel_Click">BtnExportToExcel_Click</asp:ListItem>
                                              <asp:ListItem Value="ClearAll" Text="ClearAll">ClearAll</asp:ListItem>
                                          </asp:DropDownList>
-                                         <label for="DdlPageFunction">Page Function</label>
+                                         <label for="DdlDeveloperPageFunction">Page Function</label>
                                      </div>
                                  </div>
                                  <div class="col-md-4 mb-3">                                 
                                      <div class="form-floating mb-3">
-                                         <asp:DropDownList ID="DdlGVFunctionality" runat="server" class="form-select" aria-label="DdlGVFunctionality">
+                                         <asp:DropDownList ID="DdlDeveloperGVFunctionality" runat="server" class="form-select" aria-label="DdlDeveloperGVFunctionality">
                                              <asp:ListItem Value="Select View Events" Text="Select View Events" Selected="True">Select View Events</asp:ListItem>
                                              <asp:ListItem Value="GridView1" Text="GridView1">GridView1</asp:ListItem>
                                              <asp:ListItem Value="GridView1_Full_Functionality" Text="GridView1_Full_Functionality">GridView1_Full_Functionality</asp:ListItem>
@@ -120,14 +120,14 @@
                                              <asp:ListItem Value="GridView1_Sorting" Text="GridView1_Sorting">GridView1_Sorting</asp:ListItem>
                                              <asp:ListItem Value="GridView1_Sorted" Text="GridView1_Sorted">GridView1_Sorted</asp:ListItem>                                                                                          
                                          </asp:DropDownList>
-                                         <label for="DdlGVFunctionality">Grid View Events</label>
+                                         <label for="DdlDeveloperGVFunctionality">Grid View Events</label>
                                      </div>                                 
                                  </div>
                              </div>
                              <div class="row g-3 mb-3">
                                  <div class="col-4 mb-3">
                                      <div class="form-floating mb-3">
-                                         <asp:DropDownList ID="DdlCSharpLogic" runat="server" class="form-select" aria-label="DdlCSharpLogic">
+                                         <asp:DropDownList ID="DdlDeveloperCSharpLogic" runat="server" class="form-select" aria-label="DdlDeveloperCSharpLogic">
                                              <asp:ListItem Value="Select Logic" Text="Select Logic" Selected="True">Select Logic</asp:ListItem>
                                              <asp:ListItem Value="GridView1_DataBound" Text="GridView1_DataBound">GridView1_DataBound</asp:ListItem>
                                              <asp:ListItem Value="GridView1_RowCommand" Text="GridView1_RowCommand">GridView1_RowCommand</asp:ListItem>
@@ -147,14 +147,14 @@
                                              <asp:ListItem Value="GridView1_Functionality2" Text="GridView1_Functionality2">GridView1_Functionality2</asp:ListItem>
 
                                          </asp:DropDownList>
-                                         <label for="DdlCSharpLogic">C# Logic</label>
+                                         <label for="DdlDeveloperCSharpLogic">C# Logic</label>
                                      </div>
                                  </div>
                              </div>
                              <div class="row g-3 mb-3">
                                  <div class="col-4 mb-3">
                                      <div class="form-floating mb-3">
-                                         <asp:DropDownList ID="DdlStringFunction" runat="server" class="form-select" aria-label="DdlStringFunction">
+                                         <asp:DropDownList ID="DdlDeveloperStringFunction" runat="server" class="form-select" aria-label="DdlDeveloperStringFunction">
                                              <asp:ListItem Value="Select String Function" Text="Select String Function" Selected="True">Select String Function</asp:ListItem>
                                              <asp:ListItem Value="GridView1_DataBound" Text="GridView1_DataBound">GridView1_DataBound</asp:ListItem>
                                              <asp:ListItem Value="GridView1_RowCommand" Text="GridView1_RowCommand">GridView1_RowCommand</asp:ListItem>
@@ -174,12 +174,12 @@
                                              <asp:ListItem Value="GridView1_Functionality2" Text="GridView1_Functionality2">GridView1_Functionality2</asp:ListItem>
 
                                          </asp:DropDownList>
-                                         <label for="DdlStringFunction">String Function</label>
+                                         <label for="DdlDeveloperStringFunction">String Function</label>
                                      </div>
                                  </div>
                                  <div class="col-4 mb-3">
                                      <div class="form-floating mb-3">
-                                         <asp:DropDownList ID="DdlMathFunciton" runat="server" class="form-select" aria-label="DdlMathFunciton">
+                                         <asp:DropDownList ID="DdlDeveloperMathFunciton" runat="server" class="form-select" aria-label="DdlDeveloperMathFunciton">
                                              <asp:ListItem Value="Select Math Funciton" Text="Select Math Funciton" Selected="True">Select Math Funciton</asp:ListItem>
                                              <asp:ListItem Value="GridView1_DataBound" Text="GridView1_DataBound">GridView1_DataBound</asp:ListItem>
                                              <asp:ListItem Value="GridView1_RowCommand" Text="GridView1_RowCommand">GridView1_RowCommand</asp:ListItem>
@@ -199,12 +199,12 @@
                                              <asp:ListItem Value="GridView1_Functionality2" Text="GridView1_Functionality2">GridView1_Functionality2</asp:ListItem>
 
                                          </asp:DropDownList>
-                                         <label for="DdlMathFunciton">Math Funciton</label>
+                                         <label for="DdlDeveloperMathFunciton">Math Funciton</label>
                                      </div>
                                  </div>
                                  <div class="col-4 mb-3">
                                      <div class="form-floating mb-3">
-                                         <asp:DropDownList ID="DdlDateFunciton" runat="server" class="form-select" aria-label="DdlDateFunciton">
+                                         <asp:DropDownList ID="DdlDeveloperDateFunciton" runat="server" class="form-select" aria-label="DdlDeveloperDateFunciton">
                                              <asp:ListItem Value="Select Date Funciton" Text="Select Date Funciton" Selected="True">Select Date Funciton</asp:ListItem>
                                              <asp:ListItem Value="GridView1_DataBound" Text="GridView1_DataBound">GridView1_DataBound</asp:ListItem>
                                              <asp:ListItem Value="GridView1_RowCommand" Text="GridView1_RowCommand">GridView1_RowCommand</asp:ListItem>
@@ -224,7 +224,7 @@
                                              <asp:ListItem Value="GridView1_Functionality2" Text="GridView1_Functionality2">GridView1_Functionality2</asp:ListItem>
 
                                          </asp:DropDownList>
-                                         <label for="DdlDateFunciton">Date Funciton</label>
+                                         <label for="DdlDeveloperDateFunciton">Date Funciton</label>
                                      </div>
                                  </div>
                              </div>
@@ -233,7 +233,7 @@
                                  <div class="text-center">
 
                                      <asp:Button ID="BtnDeveloperSubmit" runat="server" Text="Submit" OnClick="BtnDeveloperSubmit_Click" class="btn btn-primary" />
-                                     <asp:Button ID="BtnDeveloperReset" runat="server" Text="Reset" OnClick="BtnReset_Click" type="reset" class="btn btn-secondary" />
+                                     <asp:Button ID="BtnDeveloperReset" runat="server" Text="Reset" OnClick="BtnDeveloperReset_Click" type="reset" class="btn btn-secondary" />
                                      <asp:Button ID="BtnDeveloper_Print" runat="server" Text="Print" OnClientClick="printDiv();" class="btn btn-primary" />
 
                                  </div>
@@ -247,7 +247,7 @@
                                             ToolTip="Out Put" aria-label="TxtDeveloper">                                   
                                         </asp:TextBox>--%>
 
-                                         <FTB:FreeTextBox id="TxtDeveloper" 
+                                         <FTB:FreeTextBox id="TxtDeveloperResult" 
                                             toolbarlayout="ParagraphMenu,FontFacesMenu,FontSizesMenu,FontForeColorsMenu,
                                                             FontForeColorPicker,FontBackColorsMenu,FontBackColorPicker|Bold,Italic,
                                                             Underline,Strikethrough,Superscript,Subscript,RemoveFormat|JustifyLeft,
@@ -296,35 +296,35 @@
                          </ContentTemplate>
                     </ajaxToolkit:TabPanel>
 
-                    <ajaxToolkit:TabPanel ID="TabPanelDeveloper" runat="server" TabIndex="1" HeaderText="DBA" CssClass="mb-3">
+                    <ajaxToolkit:TabPanel ID="TabPanelDBA" runat="server" TabIndex="1" HeaderText="DBA" CssClass="mb-3">
                         <ContentTemplate>
                           <div class="row g-3 my-3">
                                 <div class="col-md-4 mb-3">
                                 <div class="form-floating mb-3">
-                                <asp:TextBox id="TxtTableName" runat="server" class="form-control" TextMode="SingleLine" 
-                                             ToolTip="Enter Table Name" aria-label="TxtTableName" >                                   
+                                <asp:TextBox id="TxtDBATableName" runat="server" class="form-control" TextMode="SingleLine" 
+                                             ToolTip="Enter Table Name" aria-label="TxtDBATableName" >                                   
                                 </asp:TextBox>
-                                <label for="TxtTableName">Table Name</label>
+                                <label for="TxtDBATableName">Table Name</label>
                               </div>
                               </div>
                             <div class="col-md-4 mb-3">
                               <div class="form-floating mb-3">
-                              <asp:DropDownList id="DdlCategory" runat="server" class="form-select"  aria-label="Category" >
+                              <asp:DropDownList id="DdlDBACategory" runat="server" class="form-select"  aria-label="DdlDBACategory" >
                                 <asp:ListItem Value="SP" Text="SP" selected="True">SP</asp:ListItem>
                                 <asp:ListItem value="Function"  Text="Function" >Function</asp:ListItem>
                                 <asp:ListItem value="View"  Text="View" >View</asp:ListItem>
                               </asp:DropDownList>
-                              <label for="DdlCategory">Role</label>
+                              <label for="DdlDBACategory">Role</label>
                             </div>
                             </div>
                             <div class="col-4 mb-3">
                                 <div class="form-floating mb-3">
-                                <asp:DropDownList id="DdlSubCategory" runat="server" class="form-select"  aria-label="Sub Category" >
+                                <asp:DropDownList id="DdlDBASubCategory" runat="server" class="form-select"  aria-label="Sub Category" >
                                   <asp:ListItem Value="Select" Text="Select" selected="True">Select</asp:ListItem>
                                   <asp:ListItem value="value1"  Text="Text1" >Text1</asp:ListItem>
                                   <asp:ListItem value="value2"  Text="Text2" >Text2</asp:ListItem>
                                 </asp:DropDownList>
-                                <label for="DdlSubCategory">Sub Category</label>
+                                <label for="DdlDBASubCategory">Sub Category</label>
                               </div>
                             </div>
                           </div>
@@ -333,9 +333,9 @@
  
                             <div class="text-center">
                             
-                                <asp:Button ID="BtnSave" runat="server" Text="Submit" OnClick="BtnSave_Click" class="btn btn-primary"/>                                
-                                <asp:Button ID="BtnReset" runat="server" Text="Reset" OnClick="BtnReset_Click" type="reset" class="btn btn-secondary"/>
-                                <asp:Button ID="BtnPrint" runat="server" Text="Print" OnClientClick="printDiv();" class="btn btn-primary"/>
+                                <asp:Button ID="BtnDBA_Save" runat="server" Text="Submit" OnClick="BtnDBA_Save_Click" class="btn btn-primary"/>                                
+                                <asp:Button ID="BtnDBA_Reset" runat="server" Text="Reset" OnClick="BtnDBA_Reset_Click" type="reset" class="btn btn-secondary"/>
+                                <asp:Button ID="BtnDBA_Print" runat="server" Text="Print" OnClientClick="printDiv();" class="btn btn-primary"/>
         
                             </div>
                           </div>
@@ -343,10 +343,27 @@
                              <div class="col-md-12 mb-3">
                              <div class="mb-3">
                              O/P :
-                             <asp:TextBox id="TxtResult" runat="server" class="form-control" 
+                           <%--  <asp:TextBox id="TxtResult" runat="server" class="form-control" 
                                           TextMode="MultiLine" Height="700px" Width="100%"
                                           ToolTip="Out Put" aria-label="TxtTableName" >                                   
-                             </asp:TextBox>
+                             </asp:TextBox>--%>
+
+
+                                <FTB:FreeTextBox id="TxtDBAResult" 
+                                toolbarlayout="ParagraphMenu,FontFacesMenu,FontSizesMenu,FontForeColorsMenu,
+                                                FontForeColorPicker,FontBackColorsMenu,FontBackColorPicker|Bold,Italic,
+                                                Underline,Strikethrough,Superscript,Subscript,RemoveFormat|JustifyLeft,
+                                                JustifyRight,JustifyCenter,JustifyFull;BulletedList,NumberedList,Indent,
+                                                Outdent;CreateLink,Unlink,InsertImage|Cut,Copy,Paste,Delete;Undo,Redo,Print,
+                                                Save|SymbolsMenu,StylesMenu,InsertHtmlMenu|InsertRule,InsertDate,
+                                                InsertTime|InsertTable,EditTable;InsertTableRowAfter,InsertTableRowBefore,
+                                                DeleteTableRow;InsertTableColumnAfter,InsertTableColumnBefore,
+                                                DeleteTableColumn|InsertForm,InsertTextBox,InsertTextArea,InsertRadioButton,
+                                                InsertCheckBox,InsertDropDownList,InsertButton|InsertDiv,EditStyle,
+                                                InsertImageFromGallery,Preview,SelectAll,WordClean,NetSpell"
+                                runat="Server" Width="100%" Height="600px"
+                                DesignModeCss="/demos/demo.css" /> 
+                                <br /> 
                            
                            </div>
                            </div>

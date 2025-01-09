@@ -60,58 +60,58 @@ namespace AKSS_Management.AKodam_Management
         protected global::System.Web.UI.WebControls.TextBox TxtDeveloperTableName;
 
         /// <summary>
-        /// DdlPageFunction control.
+        /// DdlDeveloperPageFunction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DdlPageFunction;
+        protected global::System.Web.UI.WebControls.DropDownList DdlDeveloperPageFunction;
 
         /// <summary>
-        /// DdlGVFunctionality control.
+        /// DdlDeveloperGVFunctionality control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DdlGVFunctionality;
+        protected global::System.Web.UI.WebControls.DropDownList DdlDeveloperGVFunctionality;
 
         /// <summary>
-        /// DdlCSharpLogic control.
+        /// DdlDeveloperCSharpLogic control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DdlCSharpLogic;
+        protected global::System.Web.UI.WebControls.DropDownList DdlDeveloperCSharpLogic;
 
         /// <summary>
-        /// DdlStringFunction control.
+        /// DdlDeveloperStringFunction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DdlStringFunction;
+        protected global::System.Web.UI.WebControls.DropDownList DdlDeveloperStringFunction;
 
         /// <summary>
-        /// DdlMathFunciton control.
+        /// DdlDeveloperMathFunciton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DdlMathFunciton;
+        protected global::System.Web.UI.WebControls.DropDownList DdlDeveloperMathFunciton;
 
         /// <summary>
-        /// DdlDateFunciton control.
+        /// DdlDeveloperDateFunciton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DdlDateFunciton;
+        protected global::System.Web.UI.WebControls.DropDownList DdlDeveloperDateFunciton;
 
         /// <summary>
         /// BtnDeveloperSubmit control.
@@ -141,85 +141,85 @@ namespace AKSS_Management.AKodam_Management
         protected global::System.Web.UI.WebControls.Button BtnDeveloper_Print;
 
         /// <summary>
-        /// TxtDeveloper control.
+        /// TxtDeveloperResult control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::FreeTextBoxControls.FreeTextBox TxtDeveloper;
+        protected global::FreeTextBoxControls.FreeTextBox TxtDeveloperResult;
 
         /// <summary>
-        /// TabPanelDeveloper control.
+        /// TabPanelDBA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.TabPanel TabPanelDeveloper;
+        protected global::AjaxControlToolkit.TabPanel TabPanelDBA;
 
         /// <summary>
-        /// TxtTableName control.
+        /// TxtDBATableName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtTableName;
+        protected global::System.Web.UI.WebControls.TextBox TxtDBATableName;
 
         /// <summary>
-        /// DdlCategory control.
+        /// DdlDBACategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DdlCategory;
+        protected global::System.Web.UI.WebControls.DropDownList DdlDBACategory;
 
         /// <summary>
-        /// DdlSubCategory control.
+        /// DdlDBASubCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DdlSubCategory;
+        protected global::System.Web.UI.WebControls.DropDownList DdlDBASubCategory;
 
         /// <summary>
-        /// BtnSave control.
+        /// BtnDBA_Save control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnSave;
+        protected global::System.Web.UI.WebControls.Button BtnDBA_Save;
 
         /// <summary>
-        /// BtnReset control.
+        /// BtnDBA_Reset control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnReset;
+        protected global::System.Web.UI.WebControls.Button BtnDBA_Reset;
 
         /// <summary>
-        /// BtnPrint control.
+        /// BtnDBA_Print control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnPrint;
+        protected global::System.Web.UI.WebControls.Button BtnDBA_Print;
 
         /// <summary>
-        /// TxtResult control.
+        /// TxtDBAResult control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtResult;
+        protected global::FreeTextBoxControls.FreeTextBox TxtDBAResult;
 
         /// <summary>
         /// TabPanel2 control.

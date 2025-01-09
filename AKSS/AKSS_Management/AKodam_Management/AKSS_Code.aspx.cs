@@ -22,78 +22,11 @@ namespace AKSS_Management.AKodam_Management
 
         public void BindOnFirstPageLoad()
         {
-            BtnSave.Text = "Submit";
+            BtnDBA_Save.Text = "Submit";
             
         }
-
-        protected async void BtnSave_Click(object sender, EventArgs e)
-        {
-
-            try
-            {
-                string spname = "AKSS_CODE";
-                
-                SqlParameter[] parameters = {                    
-                    //new SqlParameter("@CRUD_Action", "SP"),
-                    new SqlParameter("@TableName", TxtTableName.Text.Trim()),
-                    //new SqlParameter("@SQL_Flag", Convert.ToInt32( txtUserId.Text.Trim())),
-                    //new SqlParameter("@SQL_SubFlag", Convert.ToInt32( txtUserId.Text.Trim())),
-                    //new SqlParameter("@SQL_Developer", Convert.ToInt32( txtUserId.Text.Trim())),
-                    //new SqlParameter("@SQL_DBA", Convert.ToInt32( txtUserId.Text.Trim())),
-                    //new SqlParameter("@SQL_Designer", Convert.ToInt32( txtUserId.Text.Trim())),
-                };
-                DataTable dt = await CommonUtility.ExecuteStoredProcedureDataTableAsync(spname, parameters);
-
-                if (dt.Rows.Count > 0)
-                {
-                    if (dt.Rows[0]["Result"].ToString() != "")
-                    {
-                        TxtResult.Text = dt.Rows[0]["Result"].ToString();
-                        PResult.InnerText = dt.Rows[0]["Result"].ToString();
-                        //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "a1", "alert('Data Fetch Successfully !');", true);
-                    }
-                }
-                else
-                {
-                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "a2", "alert('Data Not Present !');", true);
-                }
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        protected void BtnReset_Click(object sender, EventArgs e)
-        {
-            ClearAll();          
-        }
-
-        public void ClearAll()
-        {
-            TxtTableName.Text = string.Empty;
-            TxtResult.Text = string.Empty;
-
-            DdlCategory.SelectedIndex = 0;
-            DdlCategory.SelectedIndex = 0;
-
-            //Developer Tabl Controls
-            TxtDeveloperTableName.Text = string.Empty;
-            TxtDeveloper.Text = string.Empty;
-            //TxtareaDeveloper.InnerText = string.Empty;
-
-            DdlPageFunction.SelectedIndex = 0;
-            DdlGVFunctionality.SelectedIndex = 0;
-            DdlCSharpLogic.SelectedIndex = 0;
-            DdlStringFunction.SelectedIndex = 0;
-            DdlMathFunciton.SelectedIndex = 0;
-            DdlDateFunciton.SelectedIndex = 0;
-
-          
-        }
-
+      
         //##########    DEVELOPER   ################
-
         protected async void BtnDeveloperSubmit_Click(object sender, EventArgs e)
         {
             try
@@ -103,20 +36,20 @@ namespace AKSS_Management.AKodam_Management
                 SqlParameter[] parameters = {
                     new SqlParameter("@TableName", TxtDeveloperTableName.Text.Trim()),
                     new SqlParameter("@SQL_Developer", "DEVELOPER"),
-                    new SqlParameter("@SQL_Developer_DdlPageFunction", DdlPageFunction.SelectedValue.Trim()),
-                    new SqlParameter("@SQL_Developer_DdlGVFunctionality", DdlGVFunctionality.SelectedValue.Trim()),
+                    new SqlParameter("@SQL_Developer_DdlDeveloperPageFunction", DdlDeveloperPageFunction.SelectedValue.Trim()),
+                    new SqlParameter("@SQL_Developer_DdlDeveloperGVFunctionality", DdlDeveloperGVFunctionality.SelectedValue.Trim()),
                     //@TableName NVARCHAR(MAX) = NULL,
                     //@SQL_Flag NVARCHAR(MAX) = NULL,
                     //@SQL_SubFlag NVARCHAR(MAX) = NULL,
                     //@SQL_Developer NVARCHAR(MAX) = NULL,
                     //@SQL_DBA NVARCHAR(MAX) = NULL,
                     //@SQL_Designer NVARCHAR(MAX) = NULL,
-                    //@SQL_Developer_DdlPageFunction NVARCHAR(MAX) = NULL,
-                    //@SQL_Developer_DdlGVFunctionality NVARCHAR(MAX) = NULL,
-                    //@SQL_Developer_DdlCSharpLogic NVARCHAR(MAX) = NULL,
-                    //@SQL_Developer_DdlStringFunction NVARCHAR(MAX) = NULL,
-                    //@SQL_Developer_DdlMathFunciton NVARCHAR(MAX) = NULL,
-                    //@SQL_Developer_DdlDateFunciton NVARCHAR(MAX) = NULL
+                    //@SQL_Developer_DdlDeveloperPageFunction NVARCHAR(MAX) = NULL,
+                    //@SQL_Developer_DdlDeveloperGVFunctionality NVARCHAR(MAX) = NULL,
+                    //@SQL_Developer_DdlDeveloperCSharpLogic NVARCHAR(MAX) = NULL,
+                    //@SQL_Developer_DdlDeveloperStringFunction NVARCHAR(MAX) = NULL,
+                    //@SQL_Developer_DdlDeveloperMathFunciton NVARCHAR(MAX) = NULL,
+                    //@SQL_Developer_DdlDeveloperDateFunciton NVARCHAR(MAX) = NULL
                 };
                 DataTable dt = await CommonUtility.ExecuteStoredProcedureDataTableAsync(spname, parameters);
                 string result = "";
@@ -134,7 +67,7 @@ namespace AKSS_Management.AKodam_Management
                         //TxtareaDeveloper.InnerHtml = dt.Rows[0]["Result"].ToString();
                         //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "a1", "alert('Data Fetch Successfully !');", true);
                     }
-                    TxtDeveloper.Text = result; //dt.Rows[0]["Result"].ToString();
+                    TxtDeveloperResult.Text = result; //dt.Rows[0]["Result"].ToString();
                     PResult.InnerText = result; //dt.Rows[0]["Result"].ToString();
 
                 }
@@ -149,6 +82,97 @@ namespace AKSS_Management.AKodam_Management
             }
         }
 
+        protected void BtnDeveloperReset_Click(object sender, EventArgs e)
+        {
+            ClearAll();
+        }
+        
+        //##########    DBA   ################
+        protected async void BtnDBA_Save_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                string spname = "AKSS_CODE";
+
+                SqlParameter[] parameters = {                    
+                    //new SqlParameter("@CRUD_Action", "SP"),
+                    new SqlParameter("@TableName", TxtDBATableName.Text.Trim()),
+                    new SqlParameter("@SQL_DBA", "DBA"),
+                    //new SqlParameter("@SQL_Flag", Convert.ToInt32( txtUserId.Text.Trim())),
+                    //new SqlParameter("@SQL_SubFlag", Convert.ToInt32( txtUserId.Text.Trim())),
+                    //new SqlParameter("@SQL_Developer", Convert.ToInt32( txtUserId.Text.Trim())),
+                    //new SqlParameter("@SQL_DBA", Convert.ToInt32( txtUserId.Text.Trim())),
+                    //new SqlParameter("@SQL_Designer", Convert.ToInt32( txtUserId.Text.Trim())),
+                };
+                DataTable dt = await CommonUtility.ExecuteStoredProcedureDataTableAsync(spname, parameters);
+
+                //if (dt.Rows.Count > 0)
+                //{
+                //    if (dt.Rows[0]["Result"].ToString() != "")
+                //    {
+                //        TxtResult.Text = dt.Rows[0]["Result"].ToString();
+                //        PResult.InnerText = dt.Rows[0]["Result"].ToString();
+                //        //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "a1", "alert('Data Fetch Successfully !');", true);
+                //    }
+                //}
+                string result = "";
+
+                if (dt.Rows.Count > 0)
+                {
+                    if (dt.Rows[0]["Result"].ToString() != "")
+                    {
+                        for (int i = 0; i < dt.Rows.Count; i++)
+                        {
+                            result += dt.Rows[i]["Result"].ToString();
+                        }
+
+                        //TxtareaDeveloper.InnerText = dt.Rows[0]["Result"].ToString();
+                        //TxtareaDeveloper.InnerHtml = dt.Rows[0]["Result"].ToString();
+                        //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "a1", "alert('Data Fetch Successfully !');", true);
+                    }
+                    TxtDBAResult.Text = result; //dt.Rows[0]["Result"].ToString();
+                    PResult.InnerText = result; //dt.Rows[0]["Result"].ToString();
+
+                }
+                else
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "a2", "alert('Data Not Present !');", true);
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        protected void BtnDBA_Reset_Click(object sender, EventArgs e)
+        {
+            ClearAll();
+        }
+
+        public void ClearAll()
+        {
+            TxtDBATableName.Text = string.Empty;
+            TxtDBAResult.Text = string.Empty;
+
+            DdlDBACategory.SelectedIndex = 0;
+            DdlDBACategory.SelectedIndex = 0;
+
+            //Developer Tabl Controls
+            TxtDeveloperTableName.Text = string.Empty;
+            TxtDeveloperResult.Text = string.Empty;
+            //TxtareaDeveloper.InnerText = string.Empty;
+
+            DdlDeveloperPageFunction.SelectedIndex = 0;
+            DdlDeveloperGVFunctionality.SelectedIndex = 0;
+            DdlDeveloperCSharpLogic.SelectedIndex = 0;
+            DdlDeveloperStringFunction.SelectedIndex = 0;
+            DdlDeveloperMathFunciton.SelectedIndex = 0;
+            DdlDeveloperDateFunciton.SelectedIndex = 0;
+
+
+        }
 
     }
 }
