@@ -119,17 +119,24 @@ namespace AKSS_Management.AKodam_Management
                     //@SQL_Developer_DdlDateFunciton NVARCHAR(MAX) = NULL
                 };
                 DataTable dt = await CommonUtility.ExecuteStoredProcedureDataTableAsync(spname, parameters);
+                string result = "";
 
                 if (dt.Rows.Count > 0)
                 {
                     if (dt.Rows[0]["Result"].ToString() != "")
-                    {
-                        TxtDeveloper.Text = dt.Rows[0]["Result"].ToString();                        
-                        PResult.InnerText = dt.Rows[0]["Result"].ToString();
+                    {                        
+                        for (int i = 0; i < dt.Rows.Count; i++)
+                        {
+                            result += dt.Rows[i]["Result"].ToString();
+                        }
+                        
                         //TxtareaDeveloper.InnerText = dt.Rows[0]["Result"].ToString();
                         //TxtareaDeveloper.InnerHtml = dt.Rows[0]["Result"].ToString();
                         //ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "a1", "alert('Data Fetch Successfully !');", true);
                     }
+                    TxtDeveloper.Text = result; //dt.Rows[0]["Result"].ToString();
+                    PResult.InnerText = result; //dt.Rows[0]["Result"].ToString();
+
                 }
                 else
                 {
