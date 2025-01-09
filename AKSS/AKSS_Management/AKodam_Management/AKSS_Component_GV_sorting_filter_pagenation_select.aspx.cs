@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
@@ -15,26 +14,15 @@ using System.Configuration;
 
 namespace AKSS_Management.AKodam_Management
 {
-    public partial class EmpDemo : System.Web.UI.Page
+    public partial class AKSS_Component_GV_sorting_filter_pagenation_select : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
-            {
-                if (Request.QueryString["ClientId"] != null)
-                {
-                    // int ClientId = Convert.ToInt32(Request.QueryString["ClientId"].ToString());
-                    //txtClientId.Text = Request.QueryString["ClientId"].ToString();
-                    //txtClientId_TextChanged(sender, e);
-                }
-                else
-                {
-                    BindOnFirstPageLoad();
-                }
-
+            {              
+                BindOnFirstPageLoad();              
             }
         }
-
         public void BindOnFirstPageLoad()
         {
             Bind_GV();
@@ -71,15 +59,6 @@ namespace AKSS_Management.AKodam_Management
             }
         }
 
-        //protected void GridView1_RowDataBound(object sender, System.Web.UI.WebControls.GridViewRowEventArgs e)
-        //{
-        //    if (e.Row.RowType == DataControlRowType.DataRow)
-        //    {
-        //        e.Row.Attributes["onclick"] = Page.ClientScript.GetPostBackClientHyperlink(GridView1, "Select$" + e.Row.RowIndex);
-        //        e.Row.Attributes["style"] = "cursor:pointer";
-        //    }
-        //}
-
         protected void GridView1_RowCreated(object sender, GridViewRowEventArgs e)
         {
             // Example: Modify row attributes during row creation
@@ -105,8 +84,13 @@ namespace AKSS_Management.AKodam_Management
             string name = GridView1.SelectedRow.Cells[1].Text;
             string role = GridView1.SelectedRow.Cells[2].Text;
             string salary = GridView1.SelectedRow.Cells[3].Text;
-            string message = "Row Index: " + index + "\\n id: " + id + "\\n name: " + name + "\\n role: " + role + "\\n salary" +salary ;
-            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('" + message + "');", true);
+            string message = "Row Index: " + index + "\\n id: " + id + "\\n name: " + name + "\\n role: " + role + "\\n salary" + salary;
+            // ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('" + message + "');", true);
+
+            if (id != null)
+            {
+                Response.Redirect("/AKodam_Management/EmpDemoCreate.aspx?EmpId=" + id);
+            }
         }
 
         public override void VerifyRenderingInServerForm(Control control)
@@ -114,28 +98,6 @@ namespace AKSS_Management.AKodam_Management
             //required to avoid the runtime error "
             //Control 'GridView1' of type 'GridView' must be placed inside a form tag with runat=server."
         }
-         
-        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        {
-            GridView1.PageIndex = e.NewPageIndex;
-            Bind_GV();
-        }
-
-        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            if (e.CommandName == "DeleteRow")
-            {
-                int rowIndex = Convert.ToInt32(e.CommandArgument);
-                int id = Convert.ToInt32(GridView1.DataKeys[rowIndex].Value);
-
-                // Delete the row from the database
-                // Your deletion logic here
-
-                //lblMessage.Text = "Row deleted successfully!";
-                //BindGridView(); // Refresh GridView after deletion
-            }
-        }
-
-
+        
     }
 }

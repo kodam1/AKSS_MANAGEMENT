@@ -349,6 +349,11 @@
                     <i class="bi bi-circle"></i><span>AKSS ShortCut Code</span>
                 </a>
             </li>
+            <li>
+                <a href="/AKodam_Management/EmpDemo.aspx">
+                    <i class="bi bi-circle"></i><span>Emp Demo</span>
+                </a>
+            </li>
             
           <%--  <li>
             <a href="/NiceAdminComponent/components-alerts.aspx">
@@ -431,6 +436,11 @@
                 <li>
                     <a href="/AKodam_Management/AKSS_Component_Icon_Button.aspx">
                         <i class="bi bi-circle"></i><span>Icon Button</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/AKodam_Management/AKSS_Component_GV_sorting_filter_pagenation_select.aspx">
+                        <i class="bi bi-circle"></i><span>GV sort/filter/page/select</span>
                     </a>
                 </li>
             </ul>

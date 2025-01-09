@@ -11,7 +11,7 @@ namespace AKSS_Management.AKodam_Management
 {
 
 
-    public partial class EmpDemo
+    public partial class AKSS_Component_GV_sorting_filter_pagenation_select
     {
 
         /// <summary>

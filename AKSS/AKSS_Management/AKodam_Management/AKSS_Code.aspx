@@ -80,6 +80,7 @@
                                      <div class="form-floating mb-3">
                                          <asp:DropDownList ID="DdlDeveloperPageFunction" runat="server" class="form-select" aria-label="DdlDeveloperPageFunction">
                                              <asp:ListItem Value="Select Page Function" Text="Select Page Function" Selected="True">Select Page Function</asp:ListItem>
+                                             <asp:ListItem Value="Page_Full_Functionality" Text="Page_Full_Functionality" >Page_Full_Functionality</asp:ListItem>
                                              <asp:ListItem Value="Namespaces" Text="Namespaces" >Namespaces</asp:ListItem>
                                              <asp:ListItem Value="Page_Load" Text="Page_Load" >Page_Load</asp:ListItem>
                                              <asp:ListItem Value="BindOnFirstPageLoad" Text="BindOnFirstPageLoad">BindOnFirstPageLoad</asp:ListItem>

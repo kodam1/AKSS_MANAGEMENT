@@ -125,10 +125,12 @@
   <ItemGroup>
     <Content Include="AdminPanel\UserMaster.aspx" />
     <Content Include="AKodam_Management\AKSS_Code.aspx" />
+    <Content Include="AKodam_Management\AKSS_Component_GV_sorting_filter_pagenation_select.aspx" />
     <Content Include="AKodam_Management\AKSS_Component_Icon_Button.aspx" />
     <Content Include="AKodam_Management\ClientFollowUpMaster.aspx" />
     <Content Include="AKodam_Management\ClientFollowUpMasterList.aspx" />
     <Content Include="AKodam_Management\EmpDemo.aspx" />
+    <Content Include="AKodam_Management\EmpDemoCreate.aspx" />
     <Content Include="AKodam_Management\Service_GridviewCrudSP.aspx" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\img\apple-touch-icon.png" />
@@ -847,6 +849,13 @@
     <Compile Include="AKodam_Management\AKSS_Code.aspx.designer.cs">
       <DependentUpon>AKSS_Code.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AKodam_Management\AKSS_Component_GV_sorting_filter_pagenation_select.aspx.cs">
+      <DependentUpon>AKSS_Component_GV_sorting_filter_pagenation_select.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AKodam_Management\AKSS_Component_GV_sorting_filter_pagenation_select.aspx.designer.cs">
+      <DependentUpon>AKSS_Component_GV_sorting_filter_pagenation_select.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AKodam_Management\AKSS_Component_Icon_Button.aspx.cs">
       <DependentUpon>AKSS_Component_Icon_Button.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -881,6 +890,13 @@
     </Compile>
     <Compile Include="AKodam_Management\EmpDemo.aspx.designer.cs">
       <DependentUpon>EmpDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AKodam_Management\EmpDemoCreate.aspx.cs">
+      <DependentUpon>EmpDemoCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AKodam_Management\EmpDemoCreate.aspx.designer.cs">
+      <DependentUpon>EmpDemoCreate.aspx</DependentUpon>
     </Compile>
     <Compile Include="AKodam_Management\Service_GridviewCrudSP.aspx.cs">
       <DependentUpon>Service_GridviewCrudSP.aspx</DependentUpon>
