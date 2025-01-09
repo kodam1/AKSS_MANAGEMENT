@@ -51,5 +51,64 @@ Icon Buttons
 
        style="margin: 5px !important;"
 
+----------------------------------------------------------------------------------------
+
+https://www.codingfusion.com/Post/All-ASP-NET-GridView-Events-Explained-for-Beginners
+
+https://www.codeproject.com/Articles/50540/GridView-Event-Handling
+
+https://www.c-sharpcorner.com/blogs/all-gridview-events-for-beginners1
+
+https://www.aspsnippets.com/Articles/1883/Implement-Button-Click-event-in-ASPNet-GridView-using-C-and-VBNet/
+
+
+
+https://www.telerik.com/products/aspnet-ajax/documentation/getting-started/installation/web-config-settings-overview
+
+  <configSections>
+    <sectionGroup name="telerik.web.ui">
+      <section name="radCloudUpload" type="Telerik.Web.UI.CloudUploadConfigurationSection" allowDefinition="MachineToApplication" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+
+    <system.webServer>
+    <handlers>
+      <add name="Telerik_Web_UI_WebResource_axd" path="Telerik.Web.UI.WebResource.axd" type="Telerik.Web.UI.WebResourceSession" verb="*" preCondition="integratedMode" />
+    </handlers>
+  </system.webServer>
+  
+  <appSettings>
+    <add key="ValidationSettings:UnobtrusiveValidationMode" value="None" />
+    <add key="Telerik.Skin" value="Black" />
+
+    <!-- Read more at: https://docs.telerik.com/devtools/aspnet-ajax/controls/asyncupload/security -->
+    <add key="Telerik.AsyncUpload.ConfigurationEncryptionKey" value="YOUR-FIRST-UNIQUE-STRONG-RANDOM-VALUE-UNIQUE-TO-YOUR-APP"></add>
+    <add key="Telerik.Upload.ConfigurationHashKey" value="YOUR-SECOND-UNIQUE-STRONG-RANDOM-VALUE-UNIQUE-TO-YOUR-APP"></add>
+    <add key="Telerik.Upload.AllowedCustomMetaDataTypes" value="Telerik.Web.UI.AsyncUploadConfiguration" />
+    <!-- Read more at:   https://docs.telerik.com/devtools/aspnet-ajax/controls/editor/functionality/dialogs/security -->
+    <add key="Telerik.Web.UI.DialogParametersEncryptionKey" value="YOUR-THIRD-UNIQUE-STRONG-RANDOM-VALUE-UNIQUE-TO-YOUR-APP"></add>
+    
+  </appSettings>
+
+  
+    <httpHandlers>
+      <add path="Telerik.Web.UI.WebResource.axd" type="Telerik.Web.UI.WebResourceSession" verb="*" validate="false" />
+    </httpHandlers>
+
+    https://stackoverflow.com/questions/15150498/error-sanitizer-provider-is-not-configured-in-the-web-config-file
+
+     <sanitizer defaultProvider="HtmlAgilityPackSanitizerProvider">
+    <providers>
+      <add name="HtmlAgilityPackSanitizerProvider" type="AjaxControlToolkit.Sanitizer.HtmlAgilityPackSanitizerProvider"></add>
+    </providers>
+  </sanitizer>
+
+
+
+  https://www.telerik.com/products/aspnet-ajax/documentation/controls/combobox/overview
+
+
+
+
 
 
